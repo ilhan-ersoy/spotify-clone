@@ -16,7 +16,7 @@ export default function Menu() {
                     setSearch(false);
                     setlibrary(false);
                 }}>
-                    <NavLink to="/" exact='/' className={"px-6 bg-active h-10 gap-x-4 rounded mb-1 flex text-sm text-link hover:text-white items-center"} activeClassName={" text-white"}>
+                    <NavLink to="/" exact='/' className={"px-6 h-10 gap-x-4 rounded mb-1 flex text-sm text-link hover:text-white items-center"} activeClassName={" text-white"}>
                         <span>
                             <HomeIcon selected={home}/>
                         </span>

@@ -545,6 +545,10 @@ html, body, #root {
   width: 1.5rem;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
 .flex-auto {
   flex: 1 1 auto;
 }
@@ -583,12 +587,34 @@ html, body, #root {
           column-gap: 1rem;
 }
 
+.gap-x-2 {
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+}
+
+.gap-x-5 {
+  -webkit-column-gap: 1.25rem;
+          column-gap: 1.25rem;
+}
+
 .overflow-auto {
   overflow: auto;
 }
 
 .rounded {
   border-radius: 0.25rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .border-t {
@@ -622,6 +648,10 @@ html, body, #root {
 
 .bg-opacity-60 {
   --tw-bg-opacity: 0.6;
+}
+
+.bg-opacity-70 {
+  --tw-bg-opacity: 0.7;
 }
 
 .bg-gradient-to-br {
@@ -660,6 +690,10 @@ html, body, #root {
   padding-right: 3.5rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-s {
   font-size: 0.813rem;
 }
@@ -690,6 +724,10 @@ html, body, #root {
 
 .opacity-60 {
   opacity: 0.6;
+}
+
+.opacity-70 {
+  opacity: 0.7;
 }
 
 .hover\:text-white:hover {
