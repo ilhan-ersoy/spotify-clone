@@ -49,6 +49,34 @@ const LikedSongsIcon = ({size = 24}) => {
         </svg>
     )
 }
+const DownloadIcon = ({size = 20}) => {
+    return (
+        <svg role="img" fill={'currentColor'} height={size} width={size} viewBox="0 0 24 24" >
+            <path
+                d="M12 3a9 9 0 100 18 9 9 0 000-18zM1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12z"></path>
+            <path
+                d="M12 6.05a1 1 0 011 1v7.486l1.793-1.793a1 1 0 111.414 1.414L12 18.364l-4.207-4.207a1 1 0 111.414-1.414L11 14.536V7.05a1 1 0 011-1z"></path>
+        </svg>
+    )
+}
+const PrevIcon = ({size = 20}) => {
+    return (
+        <svg role="img" height="24" width="24" fill={'currentColor'}
+             viewBox="0 0 24 24">
+            <path
+                d="M15.957 2.793a1 1 0 010 1.414L8.164 12l7.793 7.793a1 1 0 11-1.414 1.414L5.336 12l9.207-9.207a1 1 0 011.414 0z"></path>
+        </svg>
+    )
+}
+
+const NextIcon = ({size = 20}) => {
+    return (
+        <svg role="img" height="24" width="24" fill={'currentColor'}
+             viewBox="0 0 24 24">
+            <path d="M8.043 2.793a1 1 0 000 1.414L15.836 12l-7.793 7.793a1 1 0 101.414 1.414L18.664 12 9.457 2.793a1 1 0 00-1.414 0z"></path>
+        </svg>
+    )
+}
 
 
 
@@ -58,5 +86,8 @@ export {
     SearchIcon,
     LibraryIcon,
     PlusIcon,
-    LikedSongsIcon
+    LikedSongsIcon,
+    DownloadIcon,
+    PrevIcon,
+    NextIcon
 }
