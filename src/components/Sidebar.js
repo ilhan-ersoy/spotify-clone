@@ -15,7 +15,7 @@ export default function Sidebar() {
             <nav className={'mt-6'}>
                 <ul>
                     <li>
-                        <a href="#" className={'py-2 px-6 flex text-sm text-link group font-semibold hover:text-white items-center'}>
+                        <a href="#" className={'py-2 px-6 flex text-sm text-link group font-semibold hover:text-white items-center transition duration-300 ease-in-out'}>
                             <span className={'w-6 h-6 flex items-center group-hover:bg-opacity-100 bg-opacity-60 justify-center mr-4 bg-white text-sm text-black'}>
                                 <PlusIcon size={'12'}/>
                             </span>
@@ -23,7 +23,7 @@ export default function Sidebar() {
                         </a>
                     </li>
                     <li>
-                        <a href="#" className={'py-2 px-6 group flex text-sm group text-link font-semibold hover:text-white items-center'}>
+                        <a href="#" className={'py-2 px-6 group flex text-sm group text-link font-semibold hover:text-white items-center transition duration-300 ease-in-out'}>
                             <span className={'w-6 h-6 flex opacity-60 group-hover:opacity-100 items-center justify-center mr-4 text-sm bg-gradient-to-br from-blue-600 to-indigo-300'}>
                                 <LikedSongsIcon size={'12'}/>
                             </span>

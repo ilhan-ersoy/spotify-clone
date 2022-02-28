@@ -10,10 +10,18 @@ module.exports = {
         active:'#282828',
         link:'#b3b3b3',
         footer:'#181818',
-        prevs :'#131313'
+        prevs :'#131313',
+        authBar:'#282828',
+        authBarActive:'#7d777742'
       },
       fontSize:{
         s:'0.813rem'
+      },
+      padding:{
+        0.5:'0.188rem',
+      },
+      width:{
+        50:'12.25rem'
       }
     },
   },
