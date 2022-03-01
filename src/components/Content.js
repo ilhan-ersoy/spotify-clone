@@ -9,15 +9,17 @@ export default function Content() {
         <main className={"flex-auto"}>
             <Navbar/>
             <Switch>
-                <Route exact='/' path={'/'}>
-                    <Home/>
-                </Route>
-                <Route path={'/search'}>
-                    <Search/>
-                </Route>
-                <Route path={'/collection'}>
-                    <Collection/>
-                </Route>
+                <nav className={'px-8 py-5'}>
+                    <Route exact='/' path={'/'}>
+                        <Home/>
+                    </Route>
+                    <Route path={'/search'}>
+                        <Search/>
+                    </Route>
+                    <Route path={'/collection'}>
+                        <Collection/>
+                    </Route>
+                </nav>
             </Switch>
         </main>
     )

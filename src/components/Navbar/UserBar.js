@@ -1,8 +1,10 @@
-import {AuthIcon, OpenProfileSettingsIcon} from "../../Icons";
+import {DownArr, HomeIcon, OpenProfileSettingsIcon} from "../../Icons";
 import {useRef, useState} from "react";
+import Home from "../../Pages/Home";
 
-export default function Auth() {
-    const [showAuth, setShowAuth] = useState(false);
+export default function UserBar() {
+    const [active, setActive] = useState(false);
+
     const AuthRef = useRef(null);
 
 
@@ -14,14 +16,15 @@ export default function Auth() {
 
     return (
         <div ref={AuthRef} onClick={()=>{
-            setShowAuth(!showAuth);
-        }} className={`rounded-full flex items-center gap-x-2 rounded-full bg-black bg-opacity-70 p-0.5 cursor-pointer hover:bg-authBar ${showAuth && 'bg-authBar'}`}>
+            setActive(!active);
+        }} className={`rounded-full flex items-center gap-x-2 rounded-full bg-black bg-opacity-70 p-0.5 py-0 cursor-pointer cursor-pointer hover:bg-authBar ${active && 'bg-authBar'}`}>
             <img
                 className={'w-7 h-7 rounded-full'}
                 src={user.avatar} alt=""/>
-            <a href="#" className={'text-s font-semibold'}>{user.name}</a>
-            <AuthIcon/>
-            {showAuth && (
+            <a href="#" className={'text-s font-semibold mt-1'}>{user.name}</a>
+            {/*<DownArr size={24} status={active}/>*/}
+            <DownArr status={active}/>
+            {active && (
                 <div className='absolute top-14 right-8 rounded p-1 w-50 h-32 bg-authBar text-s shadow-lg'>
                     <nav className={'mt-1'}>
                         <ul className='flex justify-between items-center px-4 py-2 text-s hover:bg-authBarActive rounded'>

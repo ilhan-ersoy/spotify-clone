@@ -22,6 +22,9 @@ module.exports = {
       },
       width:{
         50:'12.25rem'
+      },
+      margin:{
+        0.1:'0.063rem'
       }
     },
   },

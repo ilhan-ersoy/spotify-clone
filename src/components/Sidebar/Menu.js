@@ -1,22 +1,21 @@
 import {HomeIcon, LibraryIcon, SearchIcon} from "../../Icons";
 import {NavLink} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 export default function Menu() {
 
-
-    const [home, setHome] = useState(false);
+    const [home, setHome] = useState(null);
     const [search, setSearch] = useState(false);
     const [library, setlibrary] = useState(false);
 
     return (
         <nav>
             <ul className={"flex flex-col"}>
-                <li onClick={()=>{
+                <li onClick={() => {
                     setHome(true);
                     setSearch(false);
                     setlibrary(false);
                 }}>
-                    <NavLink to="/" exact='/' className={"px-6 h-10 gap-x-4  rounded mb-1 flex text-sm text-link hover:text-white items-center transition duration-200 ease-in-out"} activeClassName={" text-white"}>
+                    <NavLink to='/' exact='/' className={"px-6 h-10 gap-x-4 rounded mb-1 flex text-sm text-link hover:text-white items-center transition duration-200 ease-in-out"} activeClassName={" text-white"}>
                         <span>
                             <HomeIcon selected={home}/>
                         </span>
