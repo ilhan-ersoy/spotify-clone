@@ -12,7 +12,9 @@ module.exports = {
         footer:'#181818',
         prevs :'#131313',
         authBar:'#282828',
-        authBarActive:'#7d777742'
+        authBarActive:'#7d777742',
+        recently:'#303030',
+        recentlyActive:'#535151'
       },
       fontSize:{
         s:'0.813rem'

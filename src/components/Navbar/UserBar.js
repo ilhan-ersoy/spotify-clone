@@ -7,12 +7,10 @@ export default function UserBar() {
 
     const AuthRef = useRef(null);
 
-
     const user = {
         name:'İlhan Ersoy',
         avatar:'https://scontent.flux1-1.fna.fbcdn.net/v/t31.18172-1/13522778_1709692472613362_3310462657506682521_o.jpg?stp=dst-jpg_p320x320&_nc_cat=111&ccb=1-5&_nc_sid=0c64ff&_nc_ohc=yeli0fykVpEAX_d-tlG&_nc_ht=scontent.flux1-1.fna&edm=AP4hL3IEAAAA&oh=00_AT_px4zz1dVUW4o1Q4EIXTK5vpGtx53dvu-pr7YEPqbLdg&oe=6242B774'
     }
-
 
     return (
         <div ref={AuthRef} onClick={()=>{
@@ -22,7 +20,6 @@ export default function UserBar() {
                 className={'w-7 h-7 rounded-full'}
                 src={user.avatar} alt=""/>
             <a href="#" className={'text-s font-semibold mt-1'}>{user.name}</a>
-            {/*<DownArr size={24} status={active}/>*/}
             <DownArr status={active}/>
             {active && (
                 <div className='absolute top-14 right-8 rounded p-1 w-50 h-32 bg-authBar text-s shadow-lg'>

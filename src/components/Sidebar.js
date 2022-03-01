@@ -9,9 +9,7 @@ export default function Sidebar() {
     return (
         <div className={"w-60 pt-6 bg-black flex flex-col"}>
             <img src={spotifyLogo} alt="page_logo" className="h-10 mb-8 pr-14"/>
-
             <Menu/>
-
             <nav className={'mt-6'}>
                 <ul>
                     <li>

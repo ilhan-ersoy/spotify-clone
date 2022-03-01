@@ -8,7 +8,6 @@ export default function MyPlaylist() {
                     <a href="#" className={'flex h-8 items-center text-link hover:text-white hover:opacity-100 '}>13. Çalma Listem</a>
                 </li>)}
             </ul>
-
         </div>
     )
 }

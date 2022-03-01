@@ -93,14 +93,14 @@ const DownArr = ({size = 24, status}) => {
         <svg role="img" height={size} width={size} fill={'currentColor'}
              className={'mt-2'}
              viewBox="0 0 24 24">
-            <path d="M14 6l-6 6-6-6h12z"></path>
+            <path d="M14 10L8 4l-6 6h12z"></path>
+
         </svg>
     ): (
         <svg role="img" height={size} width={size} fill={'currentColor'}
              className={'mt-2'}
              viewBox="0 0 24 24">
-            <path d="M14 10L8 4l-6 6h12z"></path>
-
+            <path d="M14 6l-6 6-6-6h12z"></path>
         </svg>
     )
 }
@@ -117,6 +117,16 @@ const OpenProfileSettingsIcon = ({size = 20}) => {
     )
 }
 
+const PlayIcon = ({size = 20}) => {
+    return (
+        <svg role="img" height="24" width="24" viewBox="0 0 24 24" className="Svg-sc-1bi12j5-0 hDgDGI">
+            <path
+                d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+        </svg>
+    )
+}
+
+
 
 export {
     HomeIcon,
@@ -128,5 +138,6 @@ export {
     PrevIcon,
     NextIcon,
     DownArr,
-    OpenProfileSettingsIcon
+    OpenProfileSettingsIcon,
+    PlayIcon
 }
