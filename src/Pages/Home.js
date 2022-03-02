@@ -1,4 +1,5 @@
-import MenuBox from "../components/MenuBox";
+import HomeBox from "../components/HomeBox";
+import {useState} from "react";
 
 export default function Home() {
 
@@ -36,13 +37,15 @@ export default function Home() {
     ]
 
 
+
     return (
         <div>
-            <MenuBox
+            <HomeBox
                 title={'İyi akşamlar'}
                 more={'/test'}
                 items={items}
             />
+
         </div>
     )
 }

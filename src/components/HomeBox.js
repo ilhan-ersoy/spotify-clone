@@ -3,7 +3,7 @@ import {PlayIcon} from "../Icons";
 import {useState} from "react";
 import Section from "./Main/Section";
 
-export default function MenuBox({title, more = false, items}){
+export default function HomeBox({title, more = false, items}){
     return (
         <section>
             <header className={'flex items-center justify-between mb-3'}>
@@ -12,7 +12,7 @@ export default function MenuBox({title, more = false, items}){
                     (<NavLink to={more} className={'uppercase text-xs text-[#b3b3b3] font-semibold hover:underline'}>HEPSİNİ GÖR</NavLink>)
                 }
             </header>
-            <div className={'grid grid-cols-3 '}>
+            <div className={'grid grid-cols-3 gap-x-4 '}>
                 {items.map((item) => <Section item={item}/> )}
             </div>
         </section>

@@ -23,7 +23,8 @@ module.exports = {
         0.5:'0.188rem',
       },
       width:{
-        50:'12.25rem'
+        50:'12.25rem',
+        88:'22.75rem'
       },
       margin:{
         0.1:'0.063rem'

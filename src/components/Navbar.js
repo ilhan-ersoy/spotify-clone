@@ -1,4 +1,4 @@
-import {PrevIcon} from "../Icons";
+import {InputSearchIcon, PrevIcon} from "../Icons";
 import {NextIcon} from "../Icons";
 import {useHistory, useRouteMatch} from "react-router-dom";
 import UserBar from "./Navbar/UserBar";
@@ -15,15 +15,18 @@ export default function Navbar() {
                     <button onClick={()=>{history.goBack()}} className={'w-8 h-8 bg-black bg-opacity-70 flex items-center justify-center rounded-full'}>
                         <PrevIcon/>
                     </button>
-                    <button onClick={()=>history.goForward()} className={'w-8 h-8 bg-black bg-opacity-70 flex items-center justify-center rounded-full'}>
+                    <button onClick={()=>history.goForward()} className={'w-8 h-8 bg-black bg-opacity-70 flex items-center justify-center rounded-full mr-3'}>
                         <NextIcon/>
                     </button>
                 </nav>
                 <span>
                     {isSearch && (
-                        <div style={{marginLeft:'30px'}}>
-                            Search Bar
-                        </div>
+                        <nav>
+                            <label htmlFor="searchInput" className={''}>
+                                <InputSearchIcon/>
+                                <input id='search-input' type="text" className={'text-black text-sm w-88 no-outline h-10 py-1 px-7 rounded-full text-sm'} placeholder={'Sanatçılar, şarkılar veya podcast\'ler'}/>
+                            </label>
+                        </nav>
                     )}
                 </span>
             </div>
