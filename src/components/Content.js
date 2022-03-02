@@ -1,10 +1,11 @@
 import Navbar from "./Navbar";
 import {Route, Switch} from "react-router-dom";
-import Home from "../Pages/Home";
-import Search from "../Pages/Search";
-import Collection from "../Pages/Collection";
+import Home from "../PageSections/Home";
+import Search from "../PageSections/Search";
+import Collection from "../PageSections/Collection";
 import {useEffect, useState} from "react";
 import Loading from "./Utils/Loading";
+import Login from "./Auth/Login";
 
 export default function Content() {
     const [isLoading, setIsLoading] = useState(true);
@@ -28,6 +29,8 @@ export default function Content() {
                     <Route path={'/collection'}>
                         <Collection/>
                     </Route>
+
+
                 </nav>
             </Switch>:
                 <Loading/>}

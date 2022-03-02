@@ -2,12 +2,14 @@ import {InputSearchIcon, PrevIcon} from "../Icons";
 import {NextIcon} from "../Icons";
 import {useHistory, useRouteMatch} from "react-router-dom";
 import UserBar from "./Navbar/UserBar";
+import {useState} from "react";
+import Register from "./Navbar/Register";
 
 export default function Navbar() {
 
     const history = useHistory();
     const isSearch = useRouteMatch('/search');
-
+    const [auth, setAuth] = useState(true);
     return (
         <div className={'h-[3.75rem] mt-0.1 px-8 flex items-center justify-between'}>
             <div className={'flex items-center justify-between'}>
@@ -30,7 +32,7 @@ export default function Navbar() {
                     )}
                 </span>
             </div>
-            <UserBar/>
+            {auth ? <UserBar setAuth={setAuth}/> :<Register/>}
         </div>
     )
 }

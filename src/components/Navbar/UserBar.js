@@ -1,11 +1,12 @@
 import {DownArr, HomeIcon, OpenProfileSettingsIcon} from "../../Icons";
 import {useRef, useState} from "react";
-import Home from "../../Pages/Home";
+import Home from "../../PageSections/Home";
 
-export default function UserBar() {
+export default function UserBar({setAuth}) {
     const [active, setActive] = useState(false);
 
     const AuthRef = useRef(null);
+
 
     const user = {
         name:'İlhan Ersoy',
@@ -33,7 +34,7 @@ export default function UserBar() {
                         <ul className='flex justify-between items-center px-4 py-2 text-s hover:bg-authBarActive rounded'>
                             <li className={'rounded'}>Profil</li>
                         </ul>
-                        <ul className='flex justify-between items-center px-4 py-2 text-s hover:bg-authBarActive rounded'>
+                        <ul  onClick={()=>setAuth(false)} className='flex justify-between items-center px-4 py-2 text-s hover:bg-authBarActive rounded'>
                             <li className={'rounded'}>Oturumu Kapat</li>
                         </ul>
                     </nav>

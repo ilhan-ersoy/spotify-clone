@@ -17,7 +17,8 @@ module.exports = {
         recentlyActive:'#535151'
       },
       fontSize:{
-        s:'0.813rem'
+        s:'0.813rem',
+        m:'0.89rem'
       },
       padding:{
         0.5:'0.188rem',

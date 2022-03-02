@@ -1,29 +1,33 @@
 import {PlayIcon} from "../../Icons";
 import {useState} from "react";
 
-export default function Section({item}){
-    const [cursor, setCursor] = useState(false);
+export default function Section({item,type}){
     const [play, setPlay] = useState(false);
-
+    const [cursor, setCursor] = useState(false);
+    // ${cursor ? 'show' : 'hide '}
     return (
-        <div id={item.id}
-             onMouseOver={()=>setCursor(true)}
-             onMouseOut={()=>setCursor(false)}
-             className={'max-w-[32.625rem] h-20 bg-recently hover:bg-recentlyActive cursor-pointer ' +
-                 'transition duration-300 ease-in-out mt-4 rounded flex items-center justify-between'}>
-            <div className={'flex items-center gap-x-4'}>
-                <img src={item.image} className={'w-20 rounded'} alt={item.title}/>
-                <span className={'font-semibold text-sm '}>
-                                {item.title}
-                            </span>
-            </div>
+        <>
+                <div
+                    id={item.id}
+                    onMouseOver={()=>setCursor(true)}
+                    onMouseOut={()=>setCursor(false)}
+                    className={'flex flex-col bg-[#181818] w-[11.313rem] h-[16.188rem] items-center rounded transition duration-280 ease-in-out cursor-pointer hover:bg-[#292929] relative'}>
 
-            <button
-                onClick={()=>setPlay(!play)}
-                className={`mr-5 bg-[#1ed760] w-12 h-12 rounded-full shadow-xxl flex items-center 
-                    justify-around transition duration-200 ease-in-out ${cursor ? 'show' : 'hide'}  shadow-2xl`}>
-                <PlayIcon play={play} />
-            </button>
-        </div>
+
+                            <img src={item.image} className={'w-[9.313rem] rounded-full mt-3'} alt=""/>
+                            <button
+                                onClick={()=>setPlay(!play)}
+                                className={`mr-5 bg-[#1ed760] w-12 h-12 rounded-full shadow-xxl flex items-center 
+                                        justify-around transition duration-200 ease-in-out shadow-2xl absolute top-[6.625rem] left-[6.75rem] ${cursor ? 'show' : 'hide '}`}>
+                                <PlayIcon play={play} />
+                            </button>
+
+
+                    <span className={'flex flex-col items-start min-h-14 pb-8 pt-2 pl-3 w-40 text-m'}>
+                        <h5 className={'font-semibold text-m'}>{item.title}</h5>
+                        <p className={'text-s text-gray-400 mt-1'}>Sanatçı</p>
+                    </span>
+                </div>
+        </>
     )
 }
