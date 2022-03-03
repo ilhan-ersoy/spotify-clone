@@ -11,10 +11,10 @@ export default function Section({item,type}){
                     id={item.id}
                     onMouseOver={()=>setCursor(true)}
                     onMouseOut={()=>setCursor(false)}
-                    className={'flex flex-col bg-[#181818] w-[11.313rem] h-[16.188rem] items-center rounded transition duration-280 ease-in-out cursor-pointer hover:bg-[#292929] relative'}>
+                    className={'flex flex-col bg-[#181818] w-[9.42vw] h-[13.48vw] items-center rounded transition duration-280 ease-in-out cursor-pointer hover:bg-[#292929] relative overflow-hidden'}>
 
 
-                            <img src={item.image} className={'w-[9.313rem] rounded-full mt-3'} alt=""/>
+                            <img src={item.image} className={'w-[8.428vw] rounded-full mt-3'} alt=""/>
                             <button
                                 onClick={()=>setPlay(!play)}
                                 className={`mr-5 bg-[#1ed760] w-12 h-12 rounded-full shadow-xxl flex items-center 

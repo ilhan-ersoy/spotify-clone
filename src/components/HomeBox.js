@@ -46,14 +46,14 @@ export default function HomeBox({title, more = false, items, type}){
             default:
                 return(
                     <div>
-                        Selam
+                        test
                     </div>
                 )
         }
     }
 
     return (
-        <section>
+        <section >
             <header className={'flex items-center justify-between mb-3'}>
                 {getTitle(type)}
                 {more &&

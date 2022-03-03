@@ -49,7 +49,7 @@ export default function Home() {
 
 
     return (
-        <div className={'grid grid-rows-3 gap-10'}>
+        <div className={' grid grid-rows-3 gap-10'}>
             <HomeBox
                 title={'İyi günler'}
                 more={'/test'}
@@ -63,8 +63,36 @@ export default function Home() {
                 items={items2}
                 type={'type1'}
             />
-
-
+            {/*<HomeBox*/}
+            {/*    title={'Yakında Çalılanlar'}*/}
+            {/*    more={'/populer'}*/}
+            {/*    items={items2}*/}
+            {/*    type={'type1'}*/}
+            {/*/>*/}
+            {/*<HomeBox*/}
+            {/*    title={'İlhan Ersoy için derlendi'}*/}
+            {/*    more={'/populer'}*/}
+            {/*    items={items2}*/}
+            {/*    type={'type1'}*/}
+            {/*/>*/}
+            {/*<HomeBox*/}
+            {/*    title={'İlhan Ersoy için derlendi'}*/}
+            {/*    more={'/populer'}*/}
+            {/*    items={items2}*/}
+            {/*    type={'type1'}*/}
+            {/*/>*/}
+            {/*<HomeBox*/}
+            {/*    title={'İlhan Ersoy için derlendi'}*/}
+            {/*    more={'/populer'}*/}
+            {/*    items={items2}*/}
+            {/*    type={'type1'}*/}
+            {/*/>*/}
+            {/*<HomeBox*/}
+            {/*    title={'İlhan Ersoy için derlendi'}*/}
+            {/*    more={'/populer'}*/}
+            {/*    items={items2}*/}
+            {/*    type={'type1'}*/}
+            {/*/>*/}
         </div>
     )
 }

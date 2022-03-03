@@ -5,11 +5,10 @@ import {
     BrowserRouter as Router, Route, useRouteMatch
 } from "react-router-dom";
 
-
 function App() {
     return (
         <Router>
-            <div className={"wrapper bg-backdrop"}>
+            <div className={"wrapper bg-gradient"}>
                 <Sidebar/>
                 <Content/>
             </div>

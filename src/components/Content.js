@@ -1,26 +1,23 @@
 import Navbar from "./Navbar";
-import {Route, Switch} from "react-router-dom";
+import {Route, Switch, useRouteMatch} from "react-router-dom";
 import Home from "../PageSections/Home";
 import Search from "../PageSections/Search";
 import Collection from "../PageSections/Collection";
-import {useEffect, useState} from "react";
-import Loading from "./Utils/Loading";
-import Login from "./Auth/Login";
+
 
 export default function Content() {
-    const [isLoading, setIsLoading] = useState(true);
-
-    const timeout = setTimeout(() => {
-        setIsLoading(false);
-    }, 3000)
-
+    // const [isLoading, setIsLoading] = useState(true);
+    //
+    // const timeout = setTimeout(() => {
+    //     setIsLoading(false);
+    // }, 3000)
 
     return (
         <main className={"flex-auto"}>
             <Navbar/>
-            {!isLoading ? <Switch>
+            <Switch>
                 <nav className={'px-8 py-6'}>
-                    <Route exact='/' path={'/'}>
+                    <Route exact={'/'} path={'/'}>
                         <Home/>
                     </Route>
                     <Route path={'/search'}>
@@ -29,11 +26,9 @@ export default function Content() {
                     <Route path={'/collection'}>
                         <Collection/>
                     </Route>
-
-
                 </nav>
-            </Switch>:
-                <Loading/>}
+            </Switch>
+            {/*<Loading/>*/}
         </main>
     )
 }
