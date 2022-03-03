@@ -1,6 +1,6 @@
 export default function BottomBar() {
     return (
-        <div className="h-24 bg-blue-400">
+        <div className="h-24 text-center">
             Bottom Bar
         </div>
     )

@@ -998,6 +998,10 @@ html, body, #root {
   padding-left: 0.75rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-s {
   font-size: 0.813rem;
 }
