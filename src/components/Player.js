@@ -7,8 +7,16 @@ import {
     PlayIcon,
     ShuffleIcon
 } from "../Icons";
+import { Range, getTrackBackground } from "react-range";
+import {useState} from "react";
 
 export default function Player() {
+    const STEP = 0.1;
+    const MIN = 0;
+    const MAX = 100;
+
+    const [values, setValues] = useState([50]);
+
 
     return (
         <div className="h-24 flex justify-between items-center px-4  bg-bottomBar border-t border-gray-900 h-full">
