@@ -1,4 +1,4 @@
-import BottomBar from "./components/BottomBar";
+import Player from "./components/Player";
 import Sidebar from "./components/Sidebar";
 import Content from "./components/Content";
 import {
@@ -12,7 +12,7 @@ function App() {
                 <Sidebar/>
                 <Content/>
             </div>
-            <BottomBar/>
+            <Player/>
         </Router>
   );
 }

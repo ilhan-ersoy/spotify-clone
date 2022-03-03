@@ -14,11 +14,13 @@ module.exports = {
         authBar:'#282828',
         authBarActive:'#7d777742',
         recently:'#303030',
-        recentlyActive:'#535151'
+        recentlyActive:'#535151',
+        bottomBar:'#181818'
       },
       fontSize:{
         s:'0.813rem',
-        m:'0.89rem'
+        m:'0.89rem',
+        xxs:'0.688rem'
       },
       padding:{
         0.5:'0.188rem',
