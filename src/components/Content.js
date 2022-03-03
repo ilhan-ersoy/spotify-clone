@@ -3,19 +3,21 @@ import {Route, Switch, useRouteMatch} from "react-router-dom";
 import Home from "../PageSections/Home";
 import Search from "../PageSections/Search";
 import Collection from "../PageSections/Collection";
+import Loading from "./Utils/Loading";
+import {useState} from "react";
 
 
 export default function Content() {
-    // const [isLoading, setIsLoading] = useState(true);
-    //
-    // const timeout = setTimeout(() => {
-    //     setIsLoading(false);
-    // }, 3000)
+    const [isLoading, setIsLoading] = useState(true);
+
+    const timeout = setTimeout(() => {
+        setIsLoading(false);
+    }, 3000)
 
     return (
         <main className={"flex-auto overflow-auto "}>
             <Navbar/>
-            <Switch>
+            {!isLoading ? (<Switch>
                 <nav className={'px-8 py-6'}>
                     <Route exact={'/'} path={'/'}>
                         <Home/>
@@ -27,8 +29,8 @@ export default function Content() {
                         <Collection/>
                     </Route>
                 </nav>
-            </Switch>
-            {/*<Loading/>*/}
+            </Switch>) : <Loading/>}
+
         </main>
     )
 }
