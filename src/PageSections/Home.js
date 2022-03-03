@@ -63,36 +63,36 @@ export default function Home() {
                 items={items2}
                 type={'type1'}
             />
-            {/*<HomeBox*/}
-            {/*    title={'Yakında Çalılanlar'}*/}
-            {/*    more={'/populer'}*/}
-            {/*    items={items2}*/}
-            {/*    type={'type1'}*/}
-            {/*/>*/}
-            {/*<HomeBox*/}
-            {/*    title={'İlhan Ersoy için derlendi'}*/}
-            {/*    more={'/populer'}*/}
-            {/*    items={items2}*/}
-            {/*    type={'type1'}*/}
-            {/*/>*/}
-            {/*<HomeBox*/}
-            {/*    title={'İlhan Ersoy için derlendi'}*/}
-            {/*    more={'/populer'}*/}
-            {/*    items={items2}*/}
-            {/*    type={'type1'}*/}
-            {/*/>*/}
-            {/*<HomeBox*/}
-            {/*    title={'İlhan Ersoy için derlendi'}*/}
-            {/*    more={'/populer'}*/}
-            {/*    items={items2}*/}
-            {/*    type={'type1'}*/}
-            {/*/>*/}
-            {/*<HomeBox*/}
-            {/*    title={'İlhan Ersoy için derlendi'}*/}
-            {/*    more={'/populer'}*/}
-            {/*    items={items2}*/}
-            {/*    type={'type1'}*/}
-            {/*/>*/}
+            <HomeBox
+                title={'Yakında Çalılanlar'}
+                more={'/populer'}
+                items={items2}
+                type={'type1'}
+            />
+            <HomeBox
+                title={'İlhan Ersoy için derlendi'}
+                more={'/populer'}
+                items={items2}
+                type={'type1'}
+            />
+            <HomeBox
+                title={'İlhan Ersoy için derlendi'}
+                more={'/populer'}
+                items={items2}
+                type={'type1'}
+            />
+            <HomeBox
+                title={'İlhan Ersoy için derlendi'}
+                more={'/populer'}
+                items={items2}
+                type={'type1'}
+            />
+            <HomeBox
+                title={'İlhan Ersoy için derlendi'}
+                more={'/populer'}
+                items={items2}
+                type={'type1'}
+            />
         </div>
     )
 }

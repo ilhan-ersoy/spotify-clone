@@ -13,7 +13,7 @@ export default function Content() {
     // }, 3000)
 
     return (
-        <main className={"flex-auto"}>
+        <main className={"flex-auto overflow-auto "}>
             <Navbar/>
             <Switch>
                 <nav className={'px-8 py-6'}>
