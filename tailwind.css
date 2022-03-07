@@ -107,5 +107,22 @@
     .hide{
         opacity: 0;
     }
-
+    .displayNone{
+        display: none !important;
+    }
+    .display{
+        display: block !important;
+    }
+    .bottomAlert:after {
+        border-bottom: 10px solid var(--background-base);
+    }
+    .bottomAlert:after {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        bottom: -29px;
+        content: "";
+        max-width: 20px;
+        position: absolute;
+        right: calc(50% - 10px);
+    }
 }

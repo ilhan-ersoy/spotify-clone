@@ -22,7 +22,6 @@ export default function Player() {
     });
 
 
-
     return (
         <div className="h-24 flex justify-between items-center px-4  bg-bottomBar border-t border-gray-900 h-full">
             <div className={'h-14 w-[30%] flex items-center gap-4'}>
@@ -85,7 +84,9 @@ export default function Player() {
                 </div>
             </div>
 
-            <PlayerEnd controls = {controls}/>
+            <div className={'w-[30%] flex items-center gap-x-5 justify-end'}>
+                <PlayerEnd controls = {controls}/>
+            </div>
         </div>
     )
 }

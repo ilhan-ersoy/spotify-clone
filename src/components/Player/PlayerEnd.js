@@ -1,8 +1,17 @@
-import {ChooseDeviceIcon, FullScreenIcon, MicIcon, QueqeIcon, VolumeNormalIcon} from "../../Icons";
+import {
+    ChooseDeviceIcon,
+    FullScreenIcon,
+    MicIcon,
+    QueqeIcon,
+    VolumeHighIcon,
+    VolumeLowIcon, VolumeMuteIcon,
+    VolumeNormalIcon
+} from "../../Icons";
 import { Range, getTrackBackground } from "react-range";
 
 import {useAudio} from "react-use";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import ChooseDevice from "./ChooseDevice";
 
 export default function PlayerEnd({controls}){
     const STEP = 0.1;
@@ -10,21 +19,45 @@ export default function PlayerEnd({controls}){
     const MAX = 100;
 
     const [values, setValues] = useState([50]);
+    const [show, setShow] = useState(false);
+    const [micIcon, setMicIcon] = useState(<VolumeLowIcon/>);
+
+    useEffect(() => {
+        return () => {
+            if (values > 0 && values < 33){
+                setMicIcon(<VolumeLowIcon/>)
+            }
+            else if (values > 33 && values < 66) {
+                setMicIcon(<VolumeNormalIcon/>)
+            }
+            else if (values > 66 && values <= 100) {
+                setMicIcon(<VolumeHighIcon/>)
+            }
+            else {
+                setMicIcon(<VolumeMuteIcon/>)
+            }
+        };
+    }, [values]);
+
 
     return (
-        <div className={'w-[30%] flex items-center gap-x-5 justify-end'}>
+        <>
             <button className={'text-white text-opacity-70 hover:text-opacity-100'}>
                 <MicIcon/>
             </button>
             <button className={'text-white text-opacity-70 hover:text-opacity-100'}>
                 <QueqeIcon/>
             </button>
-            <button className={'text-white text-opacity-70 hover:text-opacity-100'}>
+            <button onClick={()=> {
+                setShow(!show)
+
+            }} className={'text-white text-opacity-70 hover:text-opacity-100 relative'}>
+                <ChooseDevice show={show}/>
                 <ChooseDeviceIcon/>
             </button>
             <div className={''}>
                 <div className={'flex items-center gap-2 w-[7.813rem]'}>
-                    <VolumeNormalIcon/>
+                    {micIcon}
                     <Range
                         values={values}
                         step={STEP}
@@ -88,6 +121,6 @@ export default function PlayerEnd({controls}){
             <button className={'text-white text-opacity-70'}>
                 <FullScreenIcon/>
             </button>
-        </div>
+        </>
     )
 }

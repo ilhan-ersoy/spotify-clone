@@ -4,6 +4,8 @@ import Content from "./components/Content";
 import {
     BrowserRouter as Router, Route, useRouteMatch
 } from "react-router-dom";
+import {SpeakerIcon} from "./Icons";
+import DeviceBar from "./components/DeviceBar";
 
 function App() {
     return (
@@ -13,6 +15,7 @@ function App() {
                 <Content/>
             </div>
             <Player/>
+            {/*<DeviceBar/>*/}
         </Router>
   );
 }
