@@ -2,7 +2,8 @@ import {NavLink} from "react-router-dom";
 import {PlayIcon} from "../Icons";
 import {useState} from "react";
 import Welcome from "./Main/Welcome";
-import Section from "./Main/Section";
+import SectionMain from "./Main/SectionMain";
+import SectionFavories from "./Main/SectionFavories";
 
 export default function HomeBox({title, more = false, items, type}){
 
@@ -39,14 +40,22 @@ export default function HomeBox({title, more = false, items, type}){
             case 'type1':
                 return(
                     <div className={'grid grid-cols-8 gap-x-4'}>
-                        {items.map((item) => <Section item={item} type={type}/> )}
+                        {items.map((item) => <SectionMain item={item} type={type}/> )}
                     </div>
                 )
 
+            case 'type2':
+                return (
+                    <div className={'w-full flex items-center gap-x-6'}>
+                        {items.map((fav) => <SectionFavories fav={fav}/> )}
+                    </div>
+                )
             default:
                 return(
                     <div>
-                        test
+                        <a href="#" className={'rounded-lg h-[13.75rem bg-[#ba5d08]'}>
+
+                        </a>
                     </div>
                 )
         }

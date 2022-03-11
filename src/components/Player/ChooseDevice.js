@@ -22,6 +22,7 @@ export default function ChooseDevice({show}){
                 onClick={()=> {
                     setMobile(!mobile)
                     setDesktop(false)
+
                 }}
                 className={`px-[0.6rem] py-2 flex items-center w-full gap-x-5 hover:bg-[#333] ${mobile && 'text-[#1db954]'}`}>
                 <DeviceIcon/>

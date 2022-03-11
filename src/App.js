@@ -4,8 +4,6 @@ import Content from "./components/Content";
 import {
     BrowserRouter as Router, Route, useRouteMatch
 } from "react-router-dom";
-import {SpeakerIcon} from "./Icons";
-import DeviceBar from "./components/DeviceBar";
 
 function App() {
     return (

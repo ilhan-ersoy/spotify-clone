@@ -1,7 +1,7 @@
 import {PlayIcon} from "../../Icons";
 import {useState} from "react";
 
-export default function Section({item,type}){
+export default function SectionMain({item,type}){
     const [play, setPlay] = useState(false);
     const [cursor, setCursor] = useState(false);
     // ${cursor ? 'show' : 'hide '}

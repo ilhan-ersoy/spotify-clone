@@ -69,13 +69,11 @@ export default function PlayerEnd({controls}){
                         }}
                         renderTrack={({ props, children }) => (
                             <div
+                                className={'flex w-full h-[2.25rem]'}
                                 onMouseDown={props.onMouseDown}
                                 onTouchStart={props.onTouchStart}
                                 style={{
                                     ...props.style,
-                                    height: "36px",
-                                    display: "flex",
-                                    width: "100%"
                                 }}
                             >
                                 <div

@@ -12,7 +12,7 @@ export default function Content() {
 
     const timeout = setTimeout(() => {
         setIsLoading(false);
-    }, 3000)
+    }, 500)
 
     return (
         <main className={"flex-auto overflow-auto "}>

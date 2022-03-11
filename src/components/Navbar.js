@@ -1,4 +1,4 @@
-import {InputSearchIcon, PrevIcon} from "../Icons";
+import {InputSearchIcon, PrevIcon, SearchIcon} from "../Icons";
 import {NextIcon} from "../Icons";
 import {useHistory, useRouteMatch} from "react-router-dom";
 import UserBar from "./Navbar/UserBar";
@@ -23,12 +23,12 @@ export default function Navbar() {
                 </nav>
                 <span>
                     {isSearch && (
-                        <nav>
-                            <label htmlFor="searchInput" className={''}>
-                                <InputSearchIcon/>
-                                <input id='search-input' type="text" className={'text-black text-sm w-88 no-outline h-10 py-1 px-7 rounded-full text-sm'} placeholder={'Sanatçılar, şarkılar veya podcast\'ler'}/>
+                        <div className="mr-auto ml-2 relative">
+                            <label htmlFor="search-input" className="text-black w-12 h-10 flex items-center justify-center absolute top-0 left-0">
+                                <SearchIcon size={24} name="search" />
                             </label>
-                        </nav>
+                            <input type="text" id="search-input" className="h-10 pl-12 outline-none text-black font-medium bg-white rounded-3xl text-sm placeholder-black/50 max-w-full w-[22.75rem]" placeholder="Sanatçılar, şarkılar veya podcast'ler"/>
+                        </div>
                     )}
                 </span>
             </div>

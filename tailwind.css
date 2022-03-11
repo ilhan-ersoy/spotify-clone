@@ -125,4 +125,7 @@
         position: absolute;
         right: calc(50% - 10px);
     }
+    .custom-transform {
+        transform: rotate(25deg) translate(18%,-2%);
+    }
 }
