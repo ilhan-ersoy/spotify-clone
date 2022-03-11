@@ -15,7 +15,11 @@ module.exports = {
         authBarActive:'#7d777742',
         recently:'#303030',
         recentlyActive:'#535151',
-        bottomBar:'#181818'
+        bottomBar:'#181818',
+        favTypeOne:'#ba5d08',
+        favTypeTwo:'#8d68ab',
+        favTypeThree:'#e05a8c',
+        favTypeFour:'#e44f32'
       },
       fontSize:{
         s:'0.813rem',

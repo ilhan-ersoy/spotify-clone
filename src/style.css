@@ -1078,6 +1078,26 @@ html, body, #root {
   background-color: rgb(40 40 40 / var(--tw-bg-opacity));
 }
 
+.bg-favTypeOne {
+  --tw-bg-opacity: 1;
+  background-color: rgb(186 93 8 / var(--tw-bg-opacity));
+}
+
+.bg-favTypeTwo {
+  --tw-bg-opacity: 1;
+  background-color: rgb(141 104 171 / var(--tw-bg-opacity));
+}
+
+.bg-favTypeThree {
+  --tw-bg-opacity: 1;
+  background-color: rgb(224 90 140 / var(--tw-bg-opacity));
+}
+
+.bg-favTypeFour {
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 79 50 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-70 {
   --tw-bg-opacity: 0.7;
 }
