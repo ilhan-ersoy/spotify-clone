@@ -1,5 +1,4 @@
 export default function SectionFavories({fav}){
-    console.log(fav.bgColor)
     return (
             <div className={`w-[23.875rem] h-[13.75rem] ${fav.bgColor} rounded-lg overflow-hidden`}>
             <a href="#" className={'rounded-lg h-[13.75rem] bg-[#ba5d08]'}>

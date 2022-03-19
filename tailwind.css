@@ -29,7 +29,12 @@
     .buttonAnimation{
         top: 300px;
     }
-
+    .bg-special {
+        background: transparent linear-gradient(355deg,#0000 -3%,rgba(210,0,0,.6352941176470588) 77%) 0 0 no-repeat padding-box;
+    }
+    .bg-special-1 {
+        background: transparent linear-gradient(355deg,#0000 -3%,rgb(110 94 235) 77%) 0 0 no-repeat padding-box;
+    }
     .blob {
         border-radius: 50%;
         background-color: #4f4f4f;

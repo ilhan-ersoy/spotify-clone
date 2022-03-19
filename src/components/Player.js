@@ -1,7 +1,7 @@
 import {
     BottomPlayIcon, ChooseDeviceIcon, FullScreenIcon,
     HeartFilledIcon,
-    LoopIcon, MicIcon, PictureInPictureIcon,
+    LoopIcon, MicIcon, NoMusic, PictureInPictureIcon,
     PlayerNextIcon,
     PlayerPrevIcon, QueqeIcon,
     ShuffleIcon
@@ -12,21 +12,33 @@ import {useEffect, useState} from "react";
 import {secondsToTime} from "./Utils/utils";
 import RangeCustomize from "./RangeCustomize";
 import PlayerEnd from "./Player/PlayerEnd";
+import {useDispatch, useSelector} from "react-redux";
+import {setControls, setPlay} from "../Redux/playerSlice";
 
 export default function Player() {
     const STEP = 0.1;
     const MIN = 0;
-
+    const dispatch = useDispatch();
+    const current = useSelector(state => state.player.current)
+    const play = useSelector(state => state.player.play)
     const [audio, state, controls, ref] = useAudio({
-        src: 'https://rr5---sn-qxoedn7k.googlevideo.com/videoplayback?expire=1646968206&ei=LmkqYvGVLtyZsfIP1dKouAg&ip=45.83.131.86&id=o-ADGP6ZU-fN2XpchaO1UR0YhmL1Pvelu8mLXG6qLqCHFs&itag=251&source=youtube&requiressl=yes&vprv=1&mime=audio%2Fwebm&gir=yes&clen=4142698&dur=247.841&lmt=1575733849176420&keepalive=yes&fexp=24001373,24007246,24162927&c=ANDROID&txp=5431432&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRQIgPLFyD_nsDgNpI6LBw5sd3OQUZ0NQt_6DJfjZEP5FXKcCIQCdZhSrdDZ0di3IpyXV2ySnYOQxOKQge-jr8pL0C4VLUw%3D%3D&title=Stranger%20Things%20Theme%20Song%20(C418%20REMIX)&redirect_counter=1&rm=sn-8xgp1vo-ioae7l&req_id=2b52cb7b452da3ee&cms_redirect=yes&cmsv=e&ipbypass=yes&mh=_t&mm=29&mn=sn-qxoedn7k&ms=rdu&mt=1646946543&mv=m&mvi=5&pl=23&lsparams=ipbypass,mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIgByMP4p5m716O_nZWCaV4EwivUP8rTltV8ld-FWB_rvkCIQCPN7jk66CXfTuV-RpCZzx5Ok54nrn6LwLoee1TF9yqQw%3D%3D'
+        src: current?.mp3Src
     });
 
+    useEffect(()=>{
+        dispatch(setControls(controls))
+        dispatch(setPlay(state.playing))
+    }, [])
+
+    useEffect(()=>{
+        controls.play()
+    }, [current])
 
     return (
         <div className="h-24 flex justify-between items-center px-4  bg-bottomBar border-t border-gray-900 h-full">
             <div className={'h-14 w-[30%] flex items-center gap-4'}>
                 <div className={'flex items-center'}>
-                    <img src={'https://i.scdn.co/image/ab67616d00004851e1936cf3e879a47f0deaece2'} className={'w-14'} alt=""/>
+                    <img src={current?.image} className={'w-14'} alt=""/>
                     <div className={'mx-3'}>
                         <h5 className={'text-s'}>Stranger Things</h5>
                         <p className={'text-xxs text-gray-400'}>Kyle Dixon & Michael Stein</p>

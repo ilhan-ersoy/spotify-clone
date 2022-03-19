@@ -1,9 +1,8 @@
 import {NavLink} from "react-router-dom";
-import {PlayIcon} from "../Icons";
-import {useState} from "react";
-import Welcome from "./Main/Welcome";
+import SectionHome from "./Main/SectionHome";
 import SectionMain from "./Main/SectionMain";
 import SectionFavories from "./Main/SectionFavories";
+import SectionSeeAll from "./Main/SectionSeeAll";
 
 export default function HomeBox({title, more = false, items, type}){
 
@@ -18,12 +17,14 @@ export default function HomeBox({title, more = false, items, type}){
                 return(
                     <h3 className={'text-2xl font-semibold tracking-tight cursor-pointer hover:underline'}>{title}</h3>
                 )
+            case 'type2':
+                return (
+                    <h3 className={'text-2xl font-semibold tracking-tight cursor-pointer hover:underline'}>{title}</h3>
+                )
 
-            default:
-                return(
-                    <div>
-                        Selam
-                    </div>
+            case 'type3':
+                return (
+                    <h3 className={'text-2xl font-semibold tracking-tight cursor-pointer hover:underline mt-8'}>{title}</h3>
                 )
         }
     }
@@ -33,37 +34,35 @@ export default function HomeBox({title, more = false, items, type}){
             case 'welcome':
                 return (
                     <div className={'grid grid-cols-3 gap-x-4'}>
-                        {items.map((item) => <Welcome item={item}/> )}
+                        {items.map((item) => <SectionHome item={item} key={item?.id}/> )}
                     </div>
                 )
 
             case 'type1':
                 return(
                     <div className={'grid grid-cols-8 gap-x-4'}>
-                        {items.map((item) => <SectionMain item={item} type={type}/> )}
+                        {items.map((item) => <SectionMain item={item} type={type} key={item?.id}/> )}
                     </div>
                 )
 
             case 'type2':
                 return (
                     <div className={'w-full flex items-center gap-x-6'}>
-                        {items.map((fav) => <SectionFavories fav={fav}/> )}
+                        {items.map((fav) => <SectionFavories fav={fav} key={fav?.id}/> )}
                     </div>
                 )
-            default:
-                return(
-                    <div>
-                        <a href="#" className={'rounded-lg h-[13.75rem bg-[#ba5d08]'}>
-
-                        </a>
+            case 'type3':
+                return (
+                    <div className={'w-full grid grid-cols-8 gap-x-4 gap-y-6  '}>
+                        {items.map((fav) => <SectionSeeAll fav={fav} key={fav?.id}/> )}
                     </div>
                 )
         }
     }
 
     return (
-        <section >
-            <header className={'flex items-center justify-between mb-3'}>
+        <section>
+            <header className={'flex items-center justify-between mb-4'}>
                 {getTitle(type)}
                 {more &&
                     (<NavLink to={more} className={'uppercase text-xs text-[#b3b3b3] font-semibold hover:underline'}>HEPSİNİ GÖR</NavLink>)
