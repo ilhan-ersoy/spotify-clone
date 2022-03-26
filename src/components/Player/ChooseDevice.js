@@ -1,11 +1,14 @@
 import {DeviceIcon, InfoIcon, SpeakerIcon} from "../../Icons";
 import {useState} from "react";
+import {useDispatch} from "react-redux";
+import {setDeviceBar} from "../../Redux/themeSlice";
+import {setDevice} from "../../Redux/devicesSlice";
 
 export default function ChooseDevice({show}){
 
     const [mobile, setMobile] = useState(false);
     const [desktop, setDesktop] = useState(false);
-
+    const dispatch = useDispatch();
     return (
         <div
             className={`w-[17.5rem] h-[18.625rem] bg-black absolute bottom-[1.75rem] 
@@ -22,7 +25,7 @@ export default function ChooseDevice({show}){
                 onClick={()=> {
                     setMobile(!mobile)
                     setDesktop(false)
-
+                    dispatch(setDevice(false))
                 }}
                 className={`px-[0.6rem] py-2 flex items-center w-full gap-x-5 hover:bg-[#333] ${mobile && 'text-[#1db954]'}`}>
                 <DeviceIcon/>
@@ -39,6 +42,7 @@ export default function ChooseDevice({show}){
                 onClick={()=> {
                     setDesktop(!desktop)
                     setMobile(false)
+                    dispatch(setDevice(true))
                 }}
                 className={`px-[0.6rem] py-2 flex items-center w-full gap-x-5 hover:bg-[#333] ${desktop && 'text-[#1db954]'}`}>
                 <DeviceIcon/>

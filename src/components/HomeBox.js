@@ -1,8 +1,10 @@
 import {NavLink} from "react-router-dom";
-import SectionHome from "./Main/SectionHome";
-import SectionMain from "./Main/SectionMain";
-import SectionFavories from "./Main/SectionFavories";
-import SectionSeeAll from "./Main/SectionSeeAll";
+import SectionHome from "./Sections/SectionHome";
+import SectionMain from "./Sections/SectionMain";
+import SectionFavories from "./Sections/SectionFavories";
+import SectionSeeAll from "./Sections/SectionSeeAll";
+import SectionCollection from "./Sections/SectionCollection";
+import LikedSongsSec from "./Collection/LikedSongsSec";
 
 export default function HomeBox({title, more = false, items, type}){
 
@@ -23,6 +25,10 @@ export default function HomeBox({title, more = false, items, type}){
                 )
 
             case 'type3':
+                return (
+                    <h3 className={'text-2xl font-semibold tracking-tight cursor-pointer hover:underline mt-8'}>{title}</h3>
+                )
+            case 'type4':
                 return (
                     <h3 className={'text-2xl font-semibold tracking-tight cursor-pointer hover:underline mt-8'}>{title}</h3>
                 )
@@ -55,6 +61,15 @@ export default function HomeBox({title, more = false, items, type}){
                 return (
                     <div className={'w-full grid grid-cols-8 gap-x-4 gap-y-6  '}>
                         {items.map((fav) => <SectionSeeAll fav={fav} key={fav?.id}/> )}
+                    </div>
+                )
+            case 'type4':
+                return (
+                    <div className={'flex justify-between'}>
+                        <LikedSongsSec/>
+                        <div className={'grid grid-cols-6 gap-x-5'}>
+                            {items.map((item) => <SectionCollection item={item} type={type} key={item?.id}/> )}
+                        </div>
                     </div>
                 )
         }

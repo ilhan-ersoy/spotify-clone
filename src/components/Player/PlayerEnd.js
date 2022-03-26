@@ -2,7 +2,7 @@ import {
     ChooseDeviceIcon,
     FullScreenIcon,
     MicIcon,
-    QueqeIcon,
+    QueqeIcon, SelectedDeviceIcon,
     VolumeHighIcon,
     VolumeLowIcon, VolumeMuteIcon,
     VolumeNormalIcon
@@ -12,6 +12,7 @@ import { Range, getTrackBackground } from "react-range";
 import {useAudio} from "react-use";
 import {useEffect, useState} from "react";
 import ChooseDevice from "./ChooseDevice";
+import {useSelector} from "react-redux";
 
 export default function PlayerEnd({controls}){
     const STEP = 0.1;
@@ -21,7 +22,7 @@ export default function PlayerEnd({controls}){
     const [values, setValues] = useState([50]);
     const [show, setShow] = useState(false);
     const [micIcon, setMicIcon] = useState(<VolumeLowIcon/>);
-
+    const device = useSelector(state => state.devices.device);
     useEffect(() => {
         return () => {
             if (values > 0 && values < 33){
@@ -48,13 +49,17 @@ export default function PlayerEnd({controls}){
             <button className={'text-white text-opacity-70 hover:text-opacity-100'}>
                 <QueqeIcon/>
             </button>
-            <button onClick={()=> {
-                setShow(!show)
 
-            }} className={'text-white text-opacity-70 hover:text-opacity-100 relative'}>
-                <ChooseDevice show={show}/>
-                <ChooseDeviceIcon/>
-            </button>
+            <div className={'flex items-center'}>
+
+                <button onClick={()=> {
+                    setShow(!show)
+                }} className={'text-white text-opacity-70 hover:text-opacity-100 relative'}>
+                    <ChooseDevice show={show} setShow={setShow}/>
+                    {device ? <SelectedDeviceIcon/> : <ChooseDeviceIcon/>}
+                </button>
+            </div>
+
             <div className={''}>
                 <div className={'flex items-center gap-2 w-[7.813rem]'}>
                     {micIcon}

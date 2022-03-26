@@ -13,7 +13,6 @@ export default function SectionHome({item}){
     const play = useSelector(state => state.player.play);
     const updateCurrent = () => {
         dispatch(setCurrent(item));
-
     }
 
     const onMouseOver = () => {
@@ -24,6 +23,7 @@ export default function SectionHome({item}){
     const onMouseOut = () => {
         setCursor(false)
     }
+
     return (
         <div
              id={item.id}

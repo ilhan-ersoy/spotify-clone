@@ -4,8 +4,7 @@
 
 @layer base {
     html,body, #root {
-        @apply h-full  text-white bg-backdrop
-
+        @apply h-full  text-white
     }
     #root {
         @apply flex flex-col
@@ -14,6 +13,25 @@
     .wrapper {
         height: calc(100% - theme('spacing.24'));
         @apply flex
+    }
+    .apple-logo {
+        background-image: url("https://accounts.scdn.co/sso/images/apple-icon.36286be565c1ca3ac9b60243f8e0a78b.svg");
+        background-size: cover;
+
+    }
+    .button-class {
+        border:3px solid white;
+        padding: 3px;
+    }
+    .button-class:hover {
+        padding:3px;
+        border-radius: 500px;
+        border:3px solid black;
+        opacity: 50;
+    }
+    .login-input:focus {
+        outline: none;
+        border:3px solid black;
     }
     .loading {
         height: 30px;
