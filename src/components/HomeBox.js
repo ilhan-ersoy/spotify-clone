@@ -80,7 +80,7 @@ export default function HomeBox({title, more = false, items, type}){
             <header className={'flex items-center justify-between mb-4'}>
                 {getTitle(type)}
                 {more &&
-                    (<NavLink to={more} className={'uppercase text-xs text-[#b3b3b3] font-semibold hover:underline'}>HEPSİNİ GÖR</NavLink>)
+                    (<NavLink to={more} className={'uppercase text-xs text-[#b3b3b3] font-semibold hover:underline'}>SEE ALL</NavLink>)
                 }
             </header>
 

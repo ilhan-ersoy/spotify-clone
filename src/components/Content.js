@@ -8,6 +8,8 @@ import {useEffect, useState} from "react";
 import Login from "./Auth/Login";
 import {useDispatch, useSelector} from "react-redux";
 import {setIsLoginPage} from "../Redux/themeSlice";
+import Podcasts from "../PageSections/Podcasts";
+import LikedSongs from "./LikedSongs";
 
 
 export default function Content({setLogin}) {
@@ -41,8 +43,14 @@ export default function Content({setLogin}) {
                     <Route path={'/search'}>
                         <Search/>
                     </Route>
-                    <Route path={'/collection'}>
+                    <Route path={'/collection/playlists'}>
                         <Collection/>
+                    </Route>
+                    <Route path={'/collection/podcasts'}>
+                        <Podcasts/>
+                    </Route>
+                    <Route path={'/tracks'}>
+                        <LikedSongs/>
                     </Route>
                     <Route path={'/login'}>
                         <Login/>

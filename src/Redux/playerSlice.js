@@ -5,7 +5,8 @@ export const playerSlice = createSlice({
     initialState: {
         controls:false,
         current:false,
-        play:false
+        play:false,
+        coverImage:false
     },
     reducers: {
         setControls: (state, action) => {
@@ -16,11 +17,14 @@ export const playerSlice = createSlice({
         },
         setPlay: (state, action) => {
             state.play = action.payload
+        },
+        setCoverImage: (state, action) => {
+            state.coverImage = action.payload
         }
     }
 })
 
 // Action creators are generated for each case reducer function
-export const { setPlay, setControls, setCurrent } = playerSlice.actions
+export const { setPlay, setControls, setCurrent, setCoverImage } = playerSlice.actions
 
 export default playerSlice.reducer

@@ -36,22 +36,22 @@ export default function Navbar() {
                         <ul className={'flex gap-x-2'}>
                             <li>
                                 <NavLink to="/collection/playlists" className={`text-s cursor-pointer font-semibold  px-4 py-3 rounded`} activeClassName={'bg-[#333333]'}>
-                                    Çalma Listeleri
+                                    Playlists
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/collection/podcasts" className={'text-s cursor-pointer font-semibold  px-4 py-3 rounded'} activeClassName={'bg-[#333333]'}>
-                                    Podcast'ler
+                                    Podcasts
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/collection/artists" className={'text-s cursor-pointer font-semibold  px-4 py-3 rounded'} activeClassName={'bg-[#333333]'}>
-                                    Sanatçılar
+                                    Artists
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/collection/albums" className={'text-s cursor-pointer font-semibold  px-4 py-3 rounded'} activeClassName={'bg-[#333333]'}>
-                                    Albümler
+                                    Albums
                                 </NavLink>
                             </li>
                         </ul>

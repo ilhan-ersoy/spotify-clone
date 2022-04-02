@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import {useSelector} from "react-redux";
 import {useState} from "react";
+import DeviceBar from "./components/DeviceBar";
 
 
 function App() {
@@ -29,10 +30,10 @@ function App() {
 
                     <div className={`wrapper transition duration-700 ease-in-out ${!isLoginPage ? ('bg-[#121212]') : ('bg-white')}`}>
                         {!isLoginPage && <Sidebar/>}
-                        <Content setLogin={setShowLogin}/>
+                        <Content/>
                     </div>
                     {!isLoginPage && <Player/>}
-
+                    {/*{!isLoginPage && <DeviceBar/>}*/}
             </Router>
         </>
   );

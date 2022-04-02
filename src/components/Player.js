@@ -4,7 +4,7 @@ import {
     LoopIcon, MicIcon, NoMusic, PictureInPictureIcon,
     PlayerNextIcon,
     PlayerPrevIcon, QueqeIcon,
-    ShuffleIcon
+    ShuffleIcon, ToggleIcon
 } from "../Icons";
 import {useAudio} from 'react-use';
 
@@ -13,7 +13,7 @@ import {secondsToTime} from "./Utils/utils";
 import RangeCustomize from "./RangeCustomize";
 import PlayerEnd from "./Player/PlayerEnd";
 import {useDispatch, useSelector} from "react-redux";
-import {setControls, setPlay} from "../Redux/playerSlice";
+import {setControls, setCoverImage, setCurrent, setPlay} from "../Redux/playerSlice";
 
 export default function Player() {
     const STEP = 0.1;
@@ -24,21 +24,30 @@ export default function Player() {
     const [audio, state, controls, ref] = useAudio({
         src: current?.mp3Src
     });
-
+    const coverImage = useSelector(state => state.player.coverImage)
     useEffect(()=>{
         dispatch(setControls(controls))
         dispatch(setPlay(state.playing))
     }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
         controls.play()
     }, [current])
+
+    const toggleStyle = ['left-[1.938rem] bottom-[1.813rem] rotate-90','left-[12.125rem] bottom-[17.25rem] rotate-180']
 
     return (
         <div className="h-24 flex justify-between items-center px-4  bg-bottomBar border-t border-gray-900 h-full">
             <div className={'h-14 w-[30%] flex items-center gap-4'}>
-                <div className={'flex items-center'}>
-                    <img src={current?.image} className={'w-14'} alt=""/>
+                <div className={'flex items-center relative'}>
+                    {current && (
+                        <div onClick={()=>dispatch(setCoverImage(!coverImage))} className={`absolute bg-black rounded-full p-0.5 ' +
+                        'hover:scale-110 cursor-pointer ${coverImage ? ('left-[12.125rem] bottom-[17.25rem] -rotate-90') : ('left-[1.938rem] bottom-[1.813rem] rotate-90')}`}>
+                            <ToggleIcon/>
+                        </div>
+                    )}
+
+                    {!coverImage && <img src={current?.coverImage} className={'w-14'} alt=""/>}
                     <div className={'mx-3'}>
                         <h5 className={'text-s'}>Stranger Things</h5>
                         <p className={'text-xxs text-gray-400'}>Kyle Dixon & Michael Stein</p>

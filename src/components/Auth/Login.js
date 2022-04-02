@@ -38,7 +38,7 @@ export default function Login(){
 
                     <img src="https://accounts.scdn.co/sso/images/google-icon.1cdc8fce9609d07f0e9d8d0bc4b61f8f.svg" alt=""/>
                     <p className={'tracking-widest uppercase text-sm text-gray-500'}>
-                        Continue with Apple
+                        Continue with Google
                     </p>
                 </button>
             </div>
@@ -66,7 +66,19 @@ export default function Login(){
                         Log in
                     </button>
                 </div>
+                <div className={'flex flex-col items-center gap-y-2 border-1 border-t border-[#d9dadd] mt-3'}>
 
+                    <h1 className={'text-center text-xl font-semibold mt-6'}>Don't have an account?</h1>
+
+                    <button className={'flex items-center justify-center gap-x-3 w-[28.125rem]  p-[0.85rem] ' +
+                        'border text-white font-semibold rounded-full text-white hover:border-black max-h-[3rem] font-semibold'}>
+
+                        {/*<img src="https://accounts.scdn.co/sso/images/google-icon.1cdc8fce9609d07f0e9d8d0bc4b61f8f.svg" alt=""/>*/}
+                        <p className={'tracking-widest uppercase text-sm text-gray-500'}>
+                            Sign up for Spotify
+                        </p>
+                    </button>
+                </div>
             </div>
 
         </div>

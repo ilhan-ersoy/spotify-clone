@@ -2,7 +2,6 @@ import {HomeIcon, LibraryIcon, SearchIcon} from "../../Icons";
 import {NavLink} from "react-router-dom";
 import {useState} from "react";
 import {useDispatch} from "react-redux";
-import {setBackground} from "../../Redux/themeSlice";
 export default function Menu() {
 
     const [home, setHome] = useState(null);
@@ -23,7 +22,7 @@ export default function Menu() {
                         <span>
                             <HomeIcon selected={home}/>
                         </span>
-                        Ana sayfa
+                        Home
                     </NavLink>
                 </li>
                 <li onClick={()=>{
@@ -35,7 +34,7 @@ export default function Menu() {
                         <span>
                             <SearchIcon selected={search}/>
                         </span>
-                        Ara
+                        Search
                     </NavLink>
                 </li>
                 <li onClick={()=>{
@@ -47,7 +46,7 @@ export default function Menu() {
                         <span>
                             <LibraryIcon selected={library}/>
                         </span>
-                        Kitaplığın
+                        Your Library
                     </NavLink>
                 </li>
             </ul>
