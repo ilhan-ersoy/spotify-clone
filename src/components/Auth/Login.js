@@ -1,5 +1,6 @@
 import {Facebook, SpotifyLoginLogo} from "../../Icons";
 import Button from "./Login/Button";
+import {NavLink} from "react-router-dom";
 
 export default function Login(){
     return (
@@ -62,9 +63,11 @@ export default function Login(){
                         <input className={'checked:'} type="checkbox"/>
                         <label className={'text-s font-semibold'}>Remember me</label>
                     </div>
-                    <button className={'bg-[#80da60] hover:scale-105 font-semibold tracking-widest uppercase rounded-full align-center text-sm'} style={{padding: '12px 28px'}}>
-                        Log in
-                    </button>
+                    <NavLink to={'/'}>
+                        <button className={'bg-[#80da60] hover:scale-105 font-semibold tracking-widest uppercase rounded-full align-center text-sm'} style={{padding: '12px 28px'}}>
+                            Log in
+                        </button>
+                    </NavLink>
                 </div>
                 <div className={'flex flex-col items-center gap-y-2 border-1 border-t border-[#d9dadd] mt-3'}>
 

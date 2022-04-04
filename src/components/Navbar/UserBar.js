@@ -10,7 +10,7 @@ export default function UserBar({setAuth}) {
 
     const user = {
         name:'İlhan Ersoy',
-        avatar:'https://scontent.flux1-1.fna.fbcdn.net/v/t31.18172-1/13522778_1709692472613362_3310462657506682521_o.jpg?stp=dst-jpg_p320x320&_nc_cat=111&ccb=1-5&_nc_sid=0c64ff&_nc_ohc=yeli0fykVpEAX_d-tlG&_nc_ht=scontent.flux1-1.fna&edm=AP4hL3IEAAAA&oh=00_AT_px4zz1dVUW4o1Q4EIXTK5vpGtx53dvu-pr7YEPqbLdg&oe=6242B774'
+        avatar:'https://scontent.flux1-1.fna.fbcdn.net/v/t31.18172-1/13522778_1709692472613362_3310462657506682521_o.jpg?stp=dst-jpg_p320x320&_nc_cat=111&ccb=1-5&_nc_sid=0c64ff&_nc_ohc=37DOzEaTVLgAX-CSaOv&_nc_ht=scontent.flux1-1.fna&edm=AP4hL3IEAAAA&oh=00_AT-1Y4uXeh0GDkUIBLW4nKceUUiL3qsYkBvDZPgfEhLdUg&oe=626E38F4'
     }
 
     return (

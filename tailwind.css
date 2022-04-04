@@ -40,6 +40,12 @@
     .bg-gradient{
         background: transparent linear-gradient(181deg, #201b50 15%,#121212 61%) 0 0 no-repeat padding-box
     }
+    .bg-ls {
+        background: rgb(80, 56, 160);
+    }
+    .likedSongsImg {
+        box-shadow: 0px 0px 7px 7px rgb(0 0 0 / 19%);
+    }
     .no-outline{
         outline: 2px solid transparent;
         outline-offset: 2px;

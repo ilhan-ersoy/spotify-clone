@@ -72,6 +72,14 @@ export default function HomeBox({title, more = false, items, type}){
                         </div>
                     </div>
                 )
+            case 'type5':
+                return (
+                    <div className={'flex justify-between'}>
+                        <div className={'grid grid-cols-6 gap-x-5'}>
+                            {items.map((item) => <SectionCollection item={item} type={type} key={item?.id}/> )}
+                        </div>
+                    </div>
+                )
         }
     }
 

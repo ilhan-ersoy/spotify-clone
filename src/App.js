@@ -27,8 +27,7 @@ function App() {
     return (
         <>
             <Router>
-
-                    <div className={`wrapper transition duration-700 ease-in-out ${!isLoginPage ? ('bg-[#121212]') : ('bg-white')}`}>
+                    <div className={`wrapper  ${!isLoginPage ? ('bg-[#121212]') : ('bg-white')}`}>
                         {!isLoginPage && <Sidebar/>}
                         <Content/>
                     </div>

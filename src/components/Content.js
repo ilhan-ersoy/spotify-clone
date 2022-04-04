@@ -10,8 +10,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {setIsLoginPage} from "../Redux/themeSlice";
 import Podcasts from "../PageSections/Podcasts";
 import LikedSongs from "./LikedSongs";
-
-
+import Artists from "../PageSections/Artists";
+import Albums from "../PageSections/Albums";
 export default function Content({setLogin}) {
     const [isLoading, setIsLoading] = useState(true);
     const isLoginPage = useSelector(state => state.theme.isLoginPage);
@@ -22,21 +22,20 @@ export default function Content({setLogin}) {
     }, 500)
 
 
-
     const isLogin = useRouteMatch('/login');
-
-   if(isLogin) {
-       dispatch(setIsLoginPage(true))
-   }else {
+    const isLikedSongs = useRouteMatch('/tracks');
+    if(isLogin) {
+        dispatch(setIsLoginPage(true))
+    }else {
        dispatch(setIsLoginPage(false))
-   }
+    }
 
 
     return (
         <main className={"flex-auto overflow-auto "}>
             {!isLoginPage && <Navbar/>}
             {!isLoading ? (<Switch>
-                <nav className={'px-8 py-6'}>
+                <nav className={`${isLikedSongs ? ('') : ('px-8 py-6')}`}>
                     <Route exact={'/'} path={'/'}>
                         <Home/>
                     </Route>
@@ -49,9 +48,16 @@ export default function Content({setLogin}) {
                     <Route path={'/collection/podcasts'}>
                         <Podcasts/>
                     </Route>
+                    <Route path={'/collection/artists'}>
+                        <Artists/>
+                    </Route>
+                    <Route path={'/collection/albums'}>
+                        <Albums/>
+                    </Route>
                     <Route path={'/tracks'}>
                         <LikedSongs/>
                     </Route>
+
                     <Route path={'/login'}>
                         <Login/>
                     </Route>

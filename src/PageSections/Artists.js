@@ -1,7 +1,6 @@
-import {PodcastsIcon} from "../Icons";
 import HomeBox from "../components/HomeBox";
 
-export default function Podcasts(){
+export default function Artists(){
     const items = [
         {
             id:1,
@@ -62,35 +61,19 @@ export default function Podcasts(){
     ]
 
     return (
-        <div className={'flex flex-col h-[43.37rem] justify-around overflow-hidden'}>
-            <div className={'flex flex-col items-center gap-y-3'}>
-                <div className={'flex flex-col items-center'}>
-                    <PodcastsIcon size={64}/>
-                </div>
-                <div className={'mt-2'}>
-                    <h1 className={'text-3xl font-semibold'}>Follow your first podcast</h1>
-                </div>
-                <div>
-                    <p>Follow podcasts you like by tapping the follow button.</p>
-                </div>
-                <div>
-                    <button className={'flex items-center justify-center px-7 py-2 ' +
-                        'border font-semibold rounded-full hover:border-black max-h-[3rem] bg-white hover:scale-110 '}>
-                        <p className={'tracking-widest uppercase text-s text-black text-underline '}>
-                            Find podcasts
-                        </p>
-                    </button>
-                </div>
-            </div>
-
-            <div>
-                <HomeBox
-                    title={''}
-                    more={'/test'}
-                    items={items}
-                    type={'type1'}
-                />
-            </div>
+        <div>
+            <HomeBox
+                title={''}
+                more={'/test'}
+                items={items}
+                type={'type1'}
+            />
+            <HomeBox
+                title={''}
+                more={'/test'}
+                items={items}
+                type={'type1'}
+            />
         </div>
     )
 }

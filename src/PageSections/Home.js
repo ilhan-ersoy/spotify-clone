@@ -4,6 +4,7 @@ import {useDispatch} from "react-redux";
 import {setCurrent} from "../Redux/playerSlice";
 
 export default function Home() {
+    const dispatch = useDispatch();
 
     const items = [
         {
@@ -55,10 +56,6 @@ export default function Home() {
             color: 'bg-gradient-to-b bg-[#ac3919] to-black'
         }
     ]
-
-    const dispatch = useDispatch();
-
-
 
     const items2 = [
         {
