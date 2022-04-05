@@ -1,4 +1,4 @@
-import {PlayIcon} from "../Icons";
+import {DurationIcon, PlayIcon} from "../Icons";
 import {useState} from "react";
 import LikedSong from "../components/LikedSongs/LikedSong";
 
@@ -79,12 +79,12 @@ export default function LikedSongs(){
                         <div>
                             date added
                         </div>
-                        <div>
-                            s
+                        <div >
+                            <DurationIcon size={16} color={'#b3b3b3'}/>
                         </div>
                     </div>
 
-                    <div className={'flex flex-col'}>
+                    <div className={'flex bg-dark flex-col gap-y-2'}>
                         <LikedSong/>
                     </div>
 

@@ -52,9 +52,9 @@ const PlusIcon = ({size = 24}) => {
         </svg>
     )
 }
-const LikedSongsIcon = ({size = 24}) => {
+const LikedSongsIcon = ({size = 24, color = 'white'}) => {
     return (
-        <svg role="img" height={size} width={size} fill={"white"} viewBox="0 0 16 16">
+        <svg role="img" height={size} width={size} fill={color} viewBox="0 0 16 16">
             <path d="M15.724 4.22A4.313 4.313 0 0012.192.814a4.269 4.269 0 00-3.622 1.13.837.837 0 01-1.14 0 4.272 4.272 0 00-6.21 5.855l5.916 7.05a1.128 1.128 0 001.727 0l5.916-7.05a4.228 4.228 0 00.945-3.577z"></path>
         </svg>
     )
@@ -390,8 +390,15 @@ const ToggleIcon = ({size = 20}) => {
         </svg>
     )
 }
+const DurationIcon = ({size = 20, color = 'white'}) => {
+    return (
+        <svg role="img" height={size} width={size} viewBox="0 0 16 16" fill={color}>
+            <path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8z"></path>
+            <path d="M8 3.25a.75.75 0 01.75.75v3.25H11a.75.75 0 010 1.5H7.25V4A.75.75 0 018 3.25z"></path>
+        </svg>
 
-
+    )
+}
 
 export {
     HomeIcon,
@@ -431,5 +438,6 @@ export {
     SpotifyLoginLogo,
     Facebook,
     PodcastsIcon,
-    ToggleIcon
+    ToggleIcon,
+    DurationIcon
 }
