@@ -9,7 +9,7 @@ import Login from "./Auth/Login";
 import {useDispatch, useSelector} from "react-redux";
 import {setIsLoginPage} from "../Redux/themeSlice";
 import Podcasts from "../PageSections/Podcasts";
-import LikedSongs from "./LikedSongs";
+import LikedSongs from "../PageSections/LikedSongs";
 import Artists from "../PageSections/Artists";
 import Albums from "../PageSections/Albums";
 export default function Content({setLogin}) {

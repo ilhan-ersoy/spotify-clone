@@ -36,7 +36,7 @@ export default function Home() {
             title:'Drake',
             image:'https://i.scdn.co/image/ab6761610000f1789e46a78c5cd2f7a8e7669980',
             coverImage:'https://i.scdn.co/image/ab67616d00001e029416ed64daf84936d89e671c',
-            mp3Src: 'https://freesound.org/data/previews/623/623878_2282212-lq.mp3',
+            mp3Src: 'https://freesound.org/data/previews/626/626722_13866597-lq.mp3',
             color:'bg-gradient-to-b bg-[#6f5fec] to-black'
         },
         {
