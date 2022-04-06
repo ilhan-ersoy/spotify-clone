@@ -32,7 +32,7 @@ function App() {
                         <Content/>
                     </div>
                     {!isLoginPage && <Player/>}
-                    {/*{!isLoginPage && <DeviceBar/>}*/}
+                    {device && <DeviceBar/>}
             </Router>
         </>
   );

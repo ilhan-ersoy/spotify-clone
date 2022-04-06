@@ -719,6 +719,14 @@ html, body, #root {
   margin-right: 1.25rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.ml-\[8\.4rem\] {
+  margin-left: 8.4rem;
+}
+
 .mr-10 {
   margin-right: 2.5rem;
 }
@@ -787,20 +795,12 @@ html, body, #root {
   margin-top: 0.25rem;
 }
 
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
 
 .mb-1 {
   margin-bottom: 0.25rem;
-}
-
-.ml-\[8\.4rem\] {
-  margin-left: 8.4rem;
 }
 
 .flex {
@@ -927,6 +927,14 @@ html, body, #root {
   width: 4%;
 }
 
+.w-\[33\%\] {
+  width: 33%;
+}
+
+.w-\[8\%\] {
+  width: 8%;
+}
+
 .w-\[95\%\] {
   width: 95%;
 }
@@ -977,10 +985,6 @@ html, body, #root {
 
 .w-\[0\.93rem\] {
   width: 0.93rem;
-}
-
-.w-\[8\%\] {
-  width: 8%;
 }
 
 .w-7 {
@@ -1039,22 +1043,6 @@ html, body, #root {
   width: 5.1vw;
 }
 
-.w-\[\] {
-  width: ;
-}
-
-.w-\[\%92\] {
-  width: %92;
-}
-
-.w-\[33\%\] {
-  width: 33%;
-}
-
-.w-\[31\%\] {
-  width: 31%;
-}
-
 .min-w-\[15rem\] {
   min-width: 15rem;
 }
@@ -1069,10 +1057,6 @@ html, body, #root {
 
 .max-w-\[32\.625rem\] {
   max-width: 32.625rem;
-}
-
-.max-w-\[92\%\] {
-  max-width: 92%;
 }
 
 .flex-auto {
@@ -1552,6 +1536,14 @@ html, body, #root {
   padding-right: 0.6rem;
 }
 
+.pb-1 {
+  padding-bottom: 0.25rem;
+}
+
+.pl-\[2\.8rem\] {
+  padding-left: 2.8rem;
+}
+
 .pl-12 {
   padding-left: 3rem;
 }
@@ -1576,12 +1568,8 @@ html, body, #root {
   padding-left: 0.75rem;
 }
 
-.pl-\[2\.8rem\] {
-  padding-left: 2.8rem;
-}
-
-.pb-1 {
-  padding-bottom: 0.25rem;
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-center {

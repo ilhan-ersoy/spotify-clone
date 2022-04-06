@@ -20,6 +20,7 @@ export default function Player() {
     const MIN = 0;
     const dispatch = useDispatch();
     const current = useSelector(state => state.player.current)
+    const device = useSelector(state => state.devices.device);
     const play = useSelector(state => state.player.play)
     const [audio, state, controls, ref] = useAudio({
         src: current?.mp3Src
@@ -37,7 +38,7 @@ export default function Player() {
     const toggleStyle = ['left-[1.938rem] bottom-[1.813rem] rotate-90','left-[12.125rem] bottom-[17.25rem] rotate-180']
 
     return (
-        <div className="h-24 flex justify-between items-center px-4  bg-bottomBar border-t border-gray-900 h-full">
+        <div className={`h-24 flex justify-between items-center px-4  bg-bottomBar border-t border-gray-900 h-full ${device && ('')}`} >
             <div className={'h-14 w-[30%] flex items-center gap-4'}>
                 <div className={'flex items-center relative'}>
                     {current && (
