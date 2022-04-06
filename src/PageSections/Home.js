@@ -17,10 +17,11 @@ export default function Home() {
         },
         {
             id:2,
-            title:'Strange Fruits Music',
-            image:'https://i.scdn.co/image/ab6761610000e5ebee1b9ea8fbb0103bd276938a',
-            coverImage: 'https://i.scdn.co/image/ab6761610000e5ebee1b9ea8fbb0103bd276938a',
-            mp3Src: 'https://freesound.org/data/previews/623/623980_1648170-lq.mp3',
+
+            title:'Kyle Dixon & Michael Stein',
+            image:'https://i.scdn.co/image/ab67616d00001e02e1936cf3e879a47f0deaece2',
+            coverImage: 'https://i.scdn.co/image/ab67616d00001e02e1936cf3e879a47f0deaece2',
+            mp3Src: 'https://freesound.org/data/previews/626/626892_13866597-lq.mp3',
             color:' bg-gradient-to-b bg-[#1f1a07] to-black'
         },
         {
@@ -75,7 +76,7 @@ export default function Home() {
     return (
         <div className={'grid grid-rows-3 gap-10'}>
             <HomeBox
-                title={'İyi günler'}
+                title={'Good evening'}
                 more={'/test'}
                 items={items}
                 type={'welcome'}

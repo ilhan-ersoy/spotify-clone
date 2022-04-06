@@ -34,6 +34,7 @@ export default function LikedSongs(){
 
     const [play, setPlay] = useState(false);
     const [cursor, setCursor] = useState(true);
+
     return (
         <div className={'flex flex-col'}>
             <div className={'flex flex-col p-10 bg-ls'}>
@@ -52,7 +53,7 @@ export default function LikedSongs(){
                     </div>
                 </div>
             </div>
-            <div className={' bg-ls-p'}>
+            <div className={'bg-ls-p'}>
                 <div className={'px-6 py-6'}>
                     <button
                         onClick={()=>setPlay(!play)}
@@ -63,29 +64,35 @@ export default function LikedSongs(){
                         <PlayIcon play={play} size={'25'} />
                     </button>
                 </div>
-                <div className={'p-12 flex flex-col gap-y-8'}>
-                    <div className={'flex justify-between text-gray-400 tracking-wider uppercase text-s '}>
+                <div className={'p-[2rem] flex flex-col gap-y-8'} >
+                    <div className={'flex justify-between text-gray-400 tracking-wider uppercase text-s pb-1'} style={{borderBottom:'1px solid rgba(255,255,255,.1)'}}>
                         <div className={'flex justify-between w-[4%]'}>
-                            <div>
-                                #
-                            </div>
-                            <div>
-                                title
+                            <div className={'pl-[2.8rem]'}>
+                                <span className={'mr-2'}>#</span>
+                                <span>title</span>
                             </div>
                         </div>
-                        <div>
-                            album
-                        </div>
-                        <div>
-                            date added
-                        </div>
-                        <div >
+                       <div className={'flex items-center justify-between w-[33%] ml-[8.4rem]'}>
+                           <div>
+                               album
+                           </div>
+                           <div>
+                               date added
+                           </div>
+                       </div>
+                        <div className={'w-[8%]'}>
                             <DurationIcon size={16} color={'#b3b3b3'}/>
                         </div>
                     </div>
 
                     <div className={'flex bg-dark flex-col gap-y-2'}>
-                        <LikedSong/>
+                        <LikedSong />
+                        <LikedSong />
+                        <LikedSong />
+                        <LikedSong />
+                        <LikedSong />
+                        <LikedSong />
+
                     </div>
 
                 </div>

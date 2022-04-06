@@ -399,6 +399,23 @@ const DurationIcon = ({size = 20, color = 'white'}) => {
 
     )
 }
+const LsPlayIcon = ({size = 20, color = 'white'}) => {
+    return (
+        <svg height={size} role="img" width={size} viewBox="0 0 24 24" >
+            <polygon points="21.57 12 5.98 3 5.98 21 21.57 12" fill="currentColor"></polygon>
+        </svg>
+    )
+}
+
+const LsPlayMoreIcon = ({size = 20, color = 'white'}) => {
+    return (
+        <svg role="img" height={size} width={size} viewBox="0 0 16 16" fill={color}>
+            <path
+                d="M3 8a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm6.5 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM16 8a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"></path>
+        </svg>
+    )
+}
+
 
 export {
     HomeIcon,
@@ -439,5 +456,7 @@ export {
     Facebook,
     PodcastsIcon,
     ToggleIcon,
-    DurationIcon
+    DurationIcon,
+    LsPlayIcon,
+    LsPlayMoreIcon
 }
