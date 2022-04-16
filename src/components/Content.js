@@ -32,7 +32,7 @@ export default function Content({setLogin}) {
 
 
     return (
-        <main className={"flex-auto overflow-auto "}>
+        <main className={"flex-auto overflow-auto"}>
             {!isLoginPage && <Navbar/>}
             {!isLoading ? (<Switch>
                 <nav className={`${isLikedSongs ? ('') : ('px-8 py-6')}`}>

@@ -1,7 +1,7 @@
 import {DeviceIcon, InfoIcon, SpeakerIcon} from "../../Icons";
 import {useState} from "react";
 import {useDispatch} from "react-redux";
-import {setDeviceBar} from "../../Redux/themeSlice";
+
 import {setDevice} from "../../Redux/devicesSlice";
 
 export default function ChooseDevice({show}){

@@ -22,8 +22,8 @@ function App() {
 
     const [isLogin, setIsLogin] = useState(null);
 
-
     const [showLogin, setShowLogin] = useState(true);
+    
     return (
         <>
             <Router>
@@ -31,7 +31,7 @@ function App() {
                         {!isLoginPage && <Sidebar/>}
                         <Content/>
                     </div>
-                    {!isLoginPage && <Player/>}
+                    
                     {device && <DeviceBar/>}
             </Router>
         </>
