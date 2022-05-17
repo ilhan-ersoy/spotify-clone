@@ -31,6 +31,7 @@ function App() {
                         {!isLoginPage && <Sidebar/>}
                         <Content/>
                     </div>
+                    <Player/>
                     
                     {device && <DeviceBar/>}
             </Router>
