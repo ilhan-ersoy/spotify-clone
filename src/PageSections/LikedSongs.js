@@ -5,7 +5,7 @@ import LikedSong from "../components/LikedSongs/LikedSong";
 export default function LikedSongs(){
     const user = {
         name:'İlhan Ersoy',
-        avatar:'https://scontent.flux1-1.fna.fbcdn.net/v/t31.18172-1/13522778_1709692472613362_3310462657506682521_o.jpg?stp=dst-jpg_p320x320&_nc_cat=111&ccb=1-5&_nc_sid=0c64ff&_nc_ohc=37DOzEaTVLgAX-CSaOv&_nc_ht=scontent.flux1-1.fna&edm=AP4hL3IEAAAA&oh=00_AT-1Y4uXeh0GDkUIBLW4nKceUUiL3qsYkBvDZPgfEhLdUg&oe=626E38F4'
+        avatar:'https://scontent-cdg2-1.xx.fbcdn.net/v/t31.18172-1/13522778_1709692472613362_3310462657506682521_o.jpg?stp=dst-jpg_p320x320&_nc_cat=111&ccb=1-6&_nc_sid=0c64ff&_nc_ohc=RQvtMuZqfbkAX90Ziq7&_nc_ht=scontent-cdg2-1.xx&edm=AP4hL3IEAAAA&oh=00_AT_BWLGDxnRsoGWrg6LzoqX5Q-_RmbHfSyKi7Z723_O5hg&oe=62A98C74'
     }
 
     const songs = [
