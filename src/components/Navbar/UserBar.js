@@ -10,7 +10,7 @@ export default function UserBar({setAuth}) {
 
     const user = {
         name:'İlhan Ersoy',
-        avatar:'https://scontent-cdg2-1.xx.fbcdn.net/v/t31.18172-1/13522778_1709692472613362_3310462657506682521_o.jpg?stp=dst-jpg_p320x320&_nc_cat=111&ccb=1-6&_nc_sid=0c64ff&_nc_ohc=RQvtMuZqfbkAX90Ziq7&_nc_ht=scontent-cdg2-1.xx&edm=AP4hL3IEAAAA&oh=00_AT_BWLGDxnRsoGWrg6LzoqX5Q-_RmbHfSyKi7Z723_O5hg&oe=62A98C74'
+        avatar:'https://scontent-ams2-1.xx.fbcdn.net/v/t31.18172-1/13522778_1709692472613362_3310462657506682521_o.jpg?stp=dst-jpg_p320x320&_nc_cat=111&ccb=1-7&_nc_sid=0c64ff&_nc_ohc=G2lElXPbn9YAX-98T_k&_nc_ht=scontent-ams2-1.xx&edm=AP4hL3IEAAAA&oh=00_AT8u3jBhC7tDaY82n7zqgyN3psDvget-N33t3VrQjhOOjg&oe=630483F4'
     }
 
     return (
@@ -27,15 +27,15 @@ export default function UserBar({setAuth}) {
                     <nav className={'mt-1'}>
                         <ul className='flex justify-between items-center px-4 py-2 text-s hover:bg-authBarActive rounded'>
                             <li className={'flex w-52 justify-between items-center rounded'}>
-                                <span>Hesap</span>
+                                <span>Account</span>
                                 <OpenProfileSettingsIcon/>
                             </li>
                         </ul>
                         <ul className='flex justify-between items-center px-4 py-2 text-s hover:bg-authBarActive rounded'>
-                            <li className={'rounded'}>Profil</li>
+                            <li className={'rounded'}>Profile</li>
                         </ul>
                         <ul  onClick={()=>setAuth(false)} className='flex justify-between items-center px-4 py-2 text-s hover:bg-authBarActive rounded'>
-                            <li className={'rounded'}>Oturumu Kapat</li>
+                            <li className={'rounded'}>Log out</li>
                         </ul>
                     </nav>
                 </div>

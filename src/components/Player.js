@@ -25,20 +25,33 @@ export default function Player() {
     const [audio, state, controls, ref] = useAudio({
         src: current?.mp3Src
     });
+    const [hidePlayer, setHidePlayer] = useState(false);
     const coverImage = useSelector(state => state.player.coverImage)
     useEffect(()=>{
-        dispatch(setControls(controls))
-        dispatch(setPlay(state.playing))
+        dispatch(setControls(controls));
+        dispatch(setPlay(state.playing));
+        
     }, [])
 
     useEffect(() => {
         controls.play()
     }, [current])
 
+    useEffect(()=>{
+        if (window.location.href.split('/')[window.location.href.split('/').length-1] == 'login') {
+            setHidePlayer(true);
+        }
+        else {
+            setHidePlayer(false)
+        }
+    },[window.location.href]);
+    
     const toggleStyle = ['left-[1.938rem] bottom-[1.813rem] rotate-90','left-[12.125rem] bottom-[17.25rem] rotate-180']
 
+
+
     return (
-        <div className={`h-24 flex justify-between items-center px-4  bg-bottomBar border-t border-gray-900 h-full ${device && ('')}`} >
+        <div style={{display:`${hidePlayer ? 'none' : ''}`}} className={`h-24 flex justify-between items-center px-4  bg-bottomBar border-t border-gray-900 h-full ${device && ('')}`} >
             <div className={'h-14 w-[30%] flex items-center gap-4'}>
                 <div className={'flex items-center relative'}>
                     {current && (

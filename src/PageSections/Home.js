@@ -42,7 +42,7 @@ export default function Home() {
         },
         {
             id:5,
-            title:'Beğenilen Şarkılar',
+            title:'Liked Songs',
             image:'https://misc.scdn.co/liked-songs/liked-songs-640.png',
             coverImage: 'https://misc.scdn.co/liked-songs/liked-songs-640.png',
             mp3Src: 'https://freesound.org/data/previews/623/623855_1391542-lq.mp3',

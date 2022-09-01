@@ -31,19 +31,19 @@ export default function Search() {
     const browses = [
         {
             id:1,
-            type:"Podcast'ler",
+            type:"Podcasts",
             image:'https://i.scdn.co/image/567158eb895ad26718a814345af0fc43ee785ec5',
             bgColor:'bg-[#48866a]'
         },
         {
             id:2,
-            type:'Senin İçin',
+            type:'Made For You',
             image:'https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe',
             bgColor: 'bg-[#1d3264]'
         },
         {
             id:3,
-            type:'Listeler',
+            type:'Charts',
             image:'https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg',
             bgColor: 'bg-[#8d68ab]'
         },
@@ -79,19 +79,19 @@ export default function Search() {
         },
         {
             id:9,
-            type:"Podcast'ler",
+            type:"Podcasts",
             image:'https://i.scdn.co/image/567158eb895ad26718a814345af0fc43ee785ec5',
             bgColor:'bg-[#48866a]'
         },
         {
             id:10,
-            type:'Senin İçin',
+            type:'Made For You',
             image:'https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe',
             bgColor: 'bg-[#1d3264]'
         },
         {
             id:11,
-            type:'Listeler',
+            type:'Charts',
             image:'https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg',
             bgColor: 'bg-[#8d68ab]'
         },
@@ -127,19 +127,19 @@ export default function Search() {
         },
         {
             id:17,
-            type:"Podcast'ler",
+            type:"Podcasts",
             image:'https://i.scdn.co/image/567158eb895ad26718a814345af0fc43ee785ec5',
             bgColor:'bg-[#48866a]'
         },
         {
             id:18,
-            type:'Senin İçin',
+            type:'Made For You',
             image:'https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe',
             bgColor: 'bg-[#1d3264]'
         },
         {
             id:19,
-            type:'Listeler',
+            type:'Charts',
             image:'https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg',
             bgColor: 'bg-[#8d68ab]'
         },
@@ -174,19 +174,19 @@ export default function Search() {
             bgColor: 'bg-[#ba5d08]'
         },{
             id:25,
-            type:"Podcast'ler",
+            type:"Podcasts",
             image:'https://i.scdn.co/image/567158eb895ad26718a814345af0fc43ee785ec5',
             bgColor:'bg-[#48866a]'
         },
         {
             id:26,
-            type:'Senin İçin',
+            type:'Made For You',
             image:'https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe',
             bgColor: 'bg-[#1d3264]'
         },
         {
             id:27,
-            type:'Listeler',
+            type:'Charts',
             image:'https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg',
             bgColor: 'bg-[#8d68ab]'
         },
@@ -221,19 +221,19 @@ export default function Search() {
             bgColor: 'bg-[#ba5d08]'
         },{
             id:33,
-            type:"Podcast'ler",
+            type:"Podcasts",
             image:'https://i.scdn.co/image/567158eb895ad26718a814345af0fc43ee785ec5',
             bgColor:'bg-[#48866a]'
         },
         {
             id:34,
-            type:'Senin İçin',
+            type:'Made For You',
             image:'https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe',
             bgColor: 'bg-[#1d3264]'
         },
         {
             id:35,
-            type:'Listeler',
+            type:'Charts',
             image:'https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg',
             bgColor: 'bg-[#8d68ab]'
         },
@@ -271,12 +271,12 @@ export default function Search() {
     return (
         <div className={'flex items-center gap-x-8 flex-col'}>
             <HomeBox
-                title={'En çok dinlediğin türler'}
+                title={'Your top genres'}
                 items={favs}
                 type={'type2'}
             />
             <HomeBox
-                title={'Hepsine göz at'}
+                title={'Browse all'}
                 items={browses}
                 type={'type3'}
             />

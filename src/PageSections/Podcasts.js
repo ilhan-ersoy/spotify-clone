@@ -33,7 +33,7 @@ export default function Podcasts(){
         },
         {
             id:5,
-            title:'Beğenilen Şarkılar',
+            title:'Liked Songs',
             image:'https://misc.scdn.co/liked-songs/liked-songs-640.png',
             mp3Src: 'https://freesound.org/data/previews/623/623855_1391542-lq.mp3',
             color:'bg-gradient-to-b bg-[#ac3919] to-black'
@@ -47,7 +47,7 @@ export default function Podcasts(){
         },
         {
             id:7,
-            title:'Beğenilen Şarkılar',
+            title:'Liked Songs',
             image:'https://misc.scdn.co/liked-songs/liked-songs-640.png',
             mp3Src: 'https://freesound.org/data/previews/623/623855_1391542-lq.mp3',
             color:'bg-gradient-to-b bg-[#ac3919] to-black'

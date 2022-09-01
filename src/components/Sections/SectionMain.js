@@ -25,7 +25,7 @@ export default function SectionMain({item,type}){
 
                     <span className={'flex flex-col items-start min-h-14 pb-8 pt-2 pl-3 w-40 text-m'}>
                         <h5 className={'font-semibold text-m'}>{item.title}</h5>
-                        <p className={'text-s text-gray-400 mt-1'}>Sanatçı</p>
+                        <p className={'text-s text-gray-400 mt-1'}>Artist</p>
                     </span>
                 </div>
         </>
