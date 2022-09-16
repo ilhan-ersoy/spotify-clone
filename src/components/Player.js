@@ -6,14 +6,14 @@ import {
     PlayerPrevIcon, QueqeIcon,
     ShuffleIcon, ToggleIcon
 } from "../Icons";
-import {useAudio} from 'react-use';
+import { useAudio } from 'react-use';
 
-import {useEffect, useState} from "react";
-import {secondsToTime} from "./Utils/utils";
+import { useEffect, useState } from "react";
+import { secondsToTime } from "./Utils/utils";
 import RangeCustomize from "./RangeCustomize";
 import PlayerEnd from "./Player/PlayerEnd";
-import {useDispatch, useSelector} from "react-redux";
-import {setControls, setCoverImage, setCurrent, setPlay} from "../Redux/playerSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { setControls, setCoverImage, setCurrent, setPlay } from "../Redux/playerSlice";
 
 export default function Player() {
     const STEP = 0.1;
@@ -27,53 +27,59 @@ export default function Player() {
     });
     const [hidePlayer, setHidePlayer] = useState(false);
     const coverImage = useSelector(state => state.player.coverImage)
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(setControls(controls));
         dispatch(setPlay(state.playing));
-        
+
     }, [])
 
     useEffect(() => {
         controls.play()
     }, [current])
 
-    useEffect(()=>{
-        if (window.location.href.split('/')[window.location.href.split('/').length-1] == 'login') {
+    useEffect(() => {
+        if (window.location.href.split('/')[window.location.href.split('/').length - 1] == 'login') {
             setHidePlayer(true);
         }
-        else {
+        else {
             setHidePlayer(false)
         }
-    },[window.location.href]);
-    
-    const toggleStyle = ['left-[1.938rem] bottom-[1.813rem] rotate-90','left-[12.125rem] bottom-[17.25rem] rotate-180']
+    }, [window.location.href]);
+
+
+
+    const toggleStyle = ['left-[1.938rem] bottom-[1.813rem] rotate-90', 'left-[12.125rem] bottom-[17.25rem] rotate-180']
 
 
 
     return (
-        <div style={{display:`${hidePlayer ? 'none' : ''}`}} className={`h-24 flex justify-between items-center px-4  bg-bottomBar border-t border-gray-900 h-full ${device && ('')}`} >
+        <div style={{ display: `${hidePlayer ? 'none' : ''}` }} className={`h-24 flex justify-between items-center px-4  bg-bottomBar border-t border-gray-900 h-full ${device && ('')}`} >
             <div className={'h-14 w-[30%] flex items-center gap-4'}>
                 <div className={'flex items-center relative'}>
                     {current && (
-                        <div onClick={()=>dispatch(setCoverImage(!coverImage))} className={`absolute bg-black rounded-full p-0.5 ' +
+                        <div onClick={() => dispatch(setCoverImage(!coverImage))} className={`absolute bg-black rounded-full p-0.5 ' +
                         'hover:scale-110 cursor-pointer ${coverImage ? ('left-[12.125rem] bottom-[17.25rem] -rotate-90') : ('left-[1.938rem] bottom-[1.813rem] rotate-90')}`}>
-                            <ToggleIcon/>
+                            <ToggleIcon />
                         </div>
                     )}
 
-                    {!coverImage && <img src={current?.coverImage} className={'w-14'} alt=""/>}
+                    {!coverImage && <img src={current?.coverImage} className={'w-14'} alt="" />}
                     <div className={'mx-3'}>
-                        <h5 className={'text-s'}>Stranger Things</h5>
-                        <p className={'text-xxs text-gray-400'}>Kyle Dixon & Michael Stein</p>
+                        <h5 className={'text-s'}>
+                            {current.songName}
+                        </h5>
+                        <p className={'text-xxs text-gray-400'}>
+                            {current.title}
+                        </p>
 
                     </div>
                 </div>
                 <div className={'flex items-center gap-4'}>
                     <button className={'text-[#1db954]'}>
-                        <HeartFilledIcon/>
+                        <HeartFilledIcon />
                     </button>
                     <button className={'text-white text-opacity-70 hover:text-opacity-100'}>
-                        <PictureInPictureIcon/>
+                        <PictureInPictureIcon />
                     </button>
                 </div>
 
@@ -82,22 +88,22 @@ export default function Player() {
                 <div className={'flex flex-col items-center gap-y-1'}>
                     <div className={'flex items-center gap-x-8'}>
                         <button className={'text-white text-opacity-70 flex items-center justify-center hover:text-opacity-100'}>
-                            <ShuffleIcon/>
+                            <ShuffleIcon />
                         </button>
                         <button
                             className={'text-white text-opacity-70 flex items-center justify-center hover:text-opacity-100'}>
-                            <PlayerPrevIcon/>
+                            <PlayerPrevIcon />
                         </button>
                         <button
-                            onClick={()=>state?.paused ? controls.play() : controls.pause()}
+                            onClick={() => state?.paused ? controls.play() : controls.pause()}
                             className={'text-white text-opacity-70 flex items-center justify-center hover:scale-110 bg-white rounded-full w-8 h-8 '}>
-                            <BottomPlayIcon playing={!state?.paused}/>
+                            <BottomPlayIcon playing={!state?.paused} />
                         </button>
                         <button className={'text-white text-opacity-70 flex items-center justify-center hover:text-opacity-100'}>
-                            <PlayerNextIcon/>
+                            <PlayerNextIcon />
                         </button>
                         <button className={'text-white text-opacity-70 flex items-center justify-center hover:text-opacity-100'}>
-                            <LoopIcon/>
+                            <LoopIcon />
                         </button>
                     </div>
                     <div className={'w-full flex items-center gap-x-2'}>
@@ -120,7 +126,7 @@ export default function Player() {
             </div>
 
             <div className={'w-[30%] flex items-center gap-x-5 justify-end'}>
-                <PlayerEnd controls = {controls}/>
+                <PlayerEnd controls={controls} />
             </div>
         </div>
     )

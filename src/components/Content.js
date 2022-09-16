@@ -1,18 +1,18 @@
 import Navbar from "./Navbar";
-import {Route, Switch, useRouteMatch} from "react-router-dom";
+import { Route, Switch, useRouteMatch } from "react-router-dom";
 import Home from "../PageSections/Home";
 import Search from "../PageSections/Search";
 import Collection from "../PageSections/Collection";
 import Loading from "./Utils/Loading";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import Login from "./Auth/Login";
-import {useDispatch, useSelector} from "react-redux";
-import {setIsLoginPage} from "../Redux/themeSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsLoginPage } from "../Redux/themeSlice";
 import Podcasts from "../PageSections/Podcasts";
 import LikedSongs from "../PageSections/LikedSongs";
 import Artists from "../PageSections/Artists";
 import Albums from "../PageSections/Albums";
-export default function Content({setLogin}) {
+export default function Content({ setLogin }) {
     const [isLoading, setIsLoading] = useState(true);
     const isLoginPage = useSelector(state => state.theme.isLoginPage);
     const dispatch = useDispatch();
@@ -24,45 +24,45 @@ export default function Content({setLogin}) {
 
     const isLogin = useRouteMatch('/login');
     const isLikedSongs = useRouteMatch('/tracks');
-    if(isLogin) {
+    if (isLogin) {
         dispatch(setIsLoginPage(true))
-    }else {
-       dispatch(setIsLoginPage(false))
+    } else {
+        dispatch(setIsLoginPage(false))
     }
 
 
     return (
         <main className={"flex-auto overflow-auto"}>
-            {!isLoginPage && <Navbar/>}
+            {!isLoginPage && <Navbar />}
             {!isLoading ? (<Switch>
                 <nav className={`${isLikedSongs ? ('') : ('px-8 py-6')}`}>
                     <Route exact={'/'} path={'/'}>
-                        <Home/>
+                        <Home />
                     </Route>
                     <Route path={'/search'}>
-                        <Search/>
+                        <Search />
                     </Route>
                     <Route path={'/collection/playlists'}>
-                        <Collection/>
+                        <Collection />
                     </Route>
                     <Route path={'/collection/podcasts'}>
-                        <Podcasts/>
+                        <Podcasts />
                     </Route>
                     <Route path={'/collection/artists'}>
-                        <Artists/>
+                        <Artists />
                     </Route>
                     <Route path={'/collection/albums'}>
-                        <Albums/>
+                        <Albums />
                     </Route>
                     <Route path={'/tracks'}>
-                        <LikedSongs/>
+                        <LikedSongs />
                     </Route>
 
                     <Route path={'/login'}>
-                        <Login/>
+                        <Login />
                     </Route>
                 </nav>
-            </Switch>) : <Loading/>}
+            </Switch>) : <Loading />}
 
         </main>
     )

@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
+! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -185,6 +185,8 @@ textarea {
   /* 1 */
   font-size: 100%;
   /* 1 */
+  font-weight: inherit;
+  /* 1 */
   line-height: inherit;
   /* 1 */
   color: inherit;
@@ -351,13 +353,6 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   /* 2 */
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
@@ -413,15 +408,9 @@ video {
   height: auto;
 }
 
-/*
-Ensure the default browser behavior of the `hidden` attribute.
-*/
-
-[hidden] {
-  display: none;
-}
-
-html, body, #root {
+html, 
+    body, 
+    #root {
   height: 100%;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -438,20 +427,20 @@ html, body, #root {
 }
 
 .button-class {
-  border:3px solid white;
+  border: 3px solid white;
   padding: 3px;
 }
 
 .button-class:hover {
-  padding:3px;
+  padding: 3px;
   border-radius: 500px;
-  border:3px solid black;
+  border: 3px solid black;
   opacity: 50;
 }
 
 .login-input:focus {
   outline: none;
-  border:3px solid black;
+  border: 3px solid black;
 }
 
 .bg-ls {
@@ -463,7 +452,7 @@ html, body, #root {
 }
 
 .bg-ls-p {
-  background: transparent linear-gradient(180deg,#1D1639 0%,#121212 50%) 0 0 no-repeat padding-box;
+  background: transparent linear-gradient(180deg, #1D1639 0%, #121212 50%) 0 0 no-repeat padding-box;
 }
 
 .blob {
@@ -477,7 +466,7 @@ html, body, #root {
   height: 20px;
   width: 20px;
   -webkit-animation: loading-blob 1.2s infinite;
-  animation:         loading-blob 1.2s infinite;
+  animation: loading-blob 1.2s infinite;
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   -webkit-transform: translate3d(0, 0, 0);
@@ -544,23 +533,23 @@ html, body, #root {
   animation-delay: 300ms;
 }
 
-.show{
-  opacity:1;
+.show {
+  opacity: 1;
 }
 
-.\!show{
-  opacity:1 !important;
+.\!show {
+  opacity: 1 !important;
 }
 
-.hide{
+.hide {
   opacity: 0;
 }
 
-.displayNone{
+.displayNone {
   display: none !important;
 }
 
-.display{
+.display {
   display: block !important;
 }
 
@@ -576,11 +565,107 @@ html, body, #root {
 }
 
 .custom-transform {
-  -webkit-transform: rotate(25deg) translate(18%,-2%);
-          transform: rotate(25deg) translate(18%,-2%);
+  -webkit-transform: rotate(25deg) translate(18%, -2%);
+          transform: rotate(25deg) translate(18%, -2%);
 }
 
 *, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::-webkit-backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -649,6 +734,10 @@ html, body, #root {
   left: 0px;
 }
 
+.left-\[1\.938rem\] {
+  left: 1.938rem;
+}
+
 .bottom-\[1\.813rem\] {
   bottom: 1.813rem;
 }
@@ -659,10 +748,6 @@ html, body, #root {
 
 .bottom-\[17\.25rem\] {
   bottom: 17.25rem;
-}
-
-.left-\[1\.938rem\] {
-  left: 1.938rem;
 }
 
 .top-\[22\.438rem\] {
@@ -1428,12 +1513,14 @@ html, body, #root {
 
 .from-blue-600 {
   --tw-gradient-from: #2563eb;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(37 99 235 / 0));
+  --tw-gradient-to: rgb(37 99 235 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .from-blue-800 {
   --tw-gradient-from: #1e40af;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(30 64 175 / 0));
+  --tw-gradient-to: rgb(30 64 175 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .to-black {
@@ -1568,10 +1655,6 @@ html, body, #root {
   padding-left: 0.75rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -1702,10 +1785,6 @@ html, body, #root {
   color: rgb(0 0 0 / 0.5);
 }
 
-.placeholder-black\/50:-ms-input-placeholder {
-  color: rgb(0 0 0 / 0.5);
-}
-
 .placeholder-black\/50::placeholder {
   color: rgb(0 0 0 / 0.5);
 }
@@ -1740,9 +1819,9 @@ html, body, #root {
 }
 
 .transition {
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, -webkit-text-decoration-color, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-transform, -webkit-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1760,7 +1839,7 @@ html, body, #root {
 }
 
 .hover\:ls-hover:hover {
-  background: rgba(255,255,255,.1);
+  background: rgba(255, 255, 255, .1);
 }
 
 .hover\:scale-110:hover {
@@ -1816,8 +1895,7 @@ html, body, #root {
 }
 
 .hover\:underline:hover {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 
 .hover\:opacity-100:hover {

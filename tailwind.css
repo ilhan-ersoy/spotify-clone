@@ -3,71 +3,91 @@
 @tailwind components;
 
 @layer base {
-    html,body, #root {
-        @apply h-full  text-white
+
+    html,
+    body,
+    #root {
+        @apply h-full text-white
     }
+
     #root {
         @apply flex flex-col
-
     }
+
     .wrapper {
         height: calc(100% - theme('spacing.24'));
         @apply flex
     }
+
     .apple-logo {
         background-image: url("https://accounts.scdn.co/sso/images/apple-icon.36286be565c1ca3ac9b60243f8e0a78b.svg");
         background-size: cover;
 
     }
+
     .button-class {
-        border:3px solid white;
+        border: 3px solid white;
         padding: 3px;
     }
+
     .button-class:hover {
-        padding:3px;
+        padding: 3px;
         border-radius: 500px;
-        border:3px solid black;
+        border: 3px solid black;
         opacity: 50;
     }
+
     .login-input:focus {
         outline: none;
-        border:3px solid black;
+        border: 3px solid black;
     }
+
     .loading {
         height: 30px;
         width: 100px;
     }
-    .bg-gradient{
-        background: transparent linear-gradient(181deg, #201b50 15%,#121212 61%) 0 0 no-repeat padding-box
+
+    .bg-gradient {
+        background: transparent linear-gradient(181deg, #201b50 15%, #121212 61%) 0 0 no-repeat padding-box
     }
+
     .bg-ls {
         background: rgb(80, 56, 160);
     }
+
     .ls-hover {
-        background: rgba(255,255,255,.1);
+        background: rgba(255, 255, 255, .1);
     }
+
     .ls-selected {
-        background: rgba(255,255,255,.3);
+        background: rgba(255, 255, 255, .3);
     }
+
     .likedSongsImg {
         box-shadow: 0px 0px 7px 7px rgb(0 0 0 / 19%);
     }
+
     .bg-ls-p {
-        background: transparent linear-gradient(180deg,#1D1639 0%,#121212 50%) 0 0 no-repeat padding-box;
+        background: transparent linear-gradient(180deg, #1D1639 0%, #121212 50%) 0 0 no-repeat padding-box;
     }
-    .no-outline{
+
+    .no-outline {
         outline: 2px solid transparent;
         outline-offset: 2px;
     }
-    .buttonAnimation{
+
+    .buttonAnimation {
         top: 300px;
     }
+
     .bg-special {
-        background: transparent linear-gradient(355deg,#0000 -3%,rgba(210,0,0,.6352941176470588) 77%) 0 0 no-repeat padding-box;
+        background: transparent linear-gradient(355deg, #0000 -3%, rgba(210, 0, 0, .6352941176470588) 77%) 0 0 no-repeat padding-box;
     }
+
     .bg-special-1 {
-        background: transparent linear-gradient(355deg,#0000 -3%,rgb(110 94 235) 77%) 0 0 no-repeat padding-box;
+        background: transparent linear-gradient(355deg, #0000 -3%, rgb(110 94 235) 77%) 0 0 no-repeat padding-box;
     }
+
     .blob {
         border-radius: 50%;
         background-color: #4f4f4f;
@@ -80,9 +100,9 @@
         width: 20px;
 
         -webkit-animation: loading-blob 1.2s infinite;
-        -moz-animation:    loading-blob 1.2s infinite;
-        -o-animation:      loading-blob 1.2s infinite;
-        animation:         loading-blob 1.2s infinite;
+        -moz-animation: loading-blob 1.2s infinite;
+        -o-animation: loading-blob 1.2s infinite;
+        animation: loading-blob 1.2s infinite;
 
         -webkit-animation-timing-function: ease-in-out;
         -moz-animation-timing-function: ease-in-out;
@@ -98,31 +118,103 @@
     }
 
     @-webkit-keyframes loading-blob {
-        0% { height: 20px; top: 5px; width: 20px; }
-        25% { height: 30px; top: 0; width: 30px; }
-        50% { height: 20px; top: 5px; width: 20px; }
-        100% { height: 20px; width: 20px; }
+        0% {
+            height: 20px;
+            top: 5px;
+            width: 20px;
+        }
+
+        25% {
+            height: 30px;
+            top: 0;
+            width: 30px;
+        }
+
+        50% {
+            height: 20px;
+            top: 5px;
+            width: 20px;
+        }
+
+        100% {
+            height: 20px;
+            width: 20px;
+        }
     }
 
     @-moz-keyframes loading-blob {
-        0% { height: 20px; top: 5px; width: 20px; }
-        25% { height: 30px; top: 0; width: 30px; }
-        50% { height: 20px; top: 5px; width: 20px; }
-        100% { height: 20px; width: 20px; }
+        0% {
+            height: 20px;
+            top: 5px;
+            width: 20px;
+        }
+
+        25% {
+            height: 30px;
+            top: 0;
+            width: 30px;
+        }
+
+        50% {
+            height: 20px;
+            top: 5px;
+            width: 20px;
+        }
+
+        100% {
+            height: 20px;
+            width: 20px;
+        }
     }
 
     @-o-keyframes loading-blob {
-        0% { height: 20px; top: 5px; width: 20px; }
-        25% { height: 30px; top: 0; width: 30px; }
-        50% { height: 20px; top: 5px; width: 20px; }
-        100% { height: 20px; width: 20px; }
+        0% {
+            height: 20px;
+            top: 5px;
+            width: 20px;
+        }
+
+        25% {
+            height: 30px;
+            top: 0;
+            width: 30px;
+        }
+
+        50% {
+            height: 20px;
+            top: 5px;
+            width: 20px;
+        }
+
+        100% {
+            height: 20px;
+            width: 20px;
+        }
     }
 
     @keyframes loading-blob {
-        0% { height: 20px; top: 5px; width: 20px; }
-        25% { height: 30px; top: 0; width: 30px; }
-        50% { height: 20px; top: 5px; width: 20px; }
-        100% { height: 20px; width: 20px; }
+        0% {
+            height: 20px;
+            top: 5px;
+            width: 20px;
+        }
+
+        25% {
+            height: 30px;
+            top: 0;
+            width: 30px;
+        }
+
+        50% {
+            height: 20px;
+            top: 5px;
+            width: 20px;
+        }
+
+        100% {
+            height: 20px;
+            width: 20px;
+        }
     }
 
     .blob2 {
@@ -139,21 +231,26 @@
         animation-delay: 300ms;
     }
 
-    .show{
-        opacity:1;
+    .show {
+        opacity: 1;
     }
-    .hide{
+
+    .hide {
         opacity: 0;
     }
-    .displayNone{
+
+    .displayNone {
         display: none !important;
     }
-    .display{
+
+    .display {
         display: block !important;
     }
+
     .bottomAlert:after {
         border-bottom: 10px solid var(--background-base);
     }
+
     .bottomAlert:after {
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
@@ -163,7 +260,8 @@
         position: absolute;
         right: calc(50% - 10px);
     }
+
     .custom-transform {
-        transform: rotate(25deg) translate(18%,-2%);
+        transform: rotate(25deg) translate(18%, -2%);
     }
 }

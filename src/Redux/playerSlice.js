@@ -3,10 +3,10 @@ import { createSlice } from '@reduxjs/toolkit'
 export const playerSlice = createSlice({
     name: 'counter',
     initialState: {
-        controls:false,
-        current:false,
-        play:false,
-        coverImage:false
+        controls: false,
+        current: false,
+        play: false,
+        coverImage: false
     },
     reducers: {
         setControls: (state, action) => {

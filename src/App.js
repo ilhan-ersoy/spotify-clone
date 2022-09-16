@@ -4,8 +4,8 @@ import Content from "./components/Content";
 import {
     BrowserRouter as Router, Route, Switch, useRouteMatch
 } from "react-router-dom";
-import {useSelector} from "react-redux";
-import {useState} from "react";
+import { useSelector } from "react-redux";
+import { useState } from "react";
 import DeviceBar from "./components/DeviceBar";
 
 
@@ -23,20 +23,20 @@ function App() {
     const [isLogin, setIsLogin] = useState(null);
 
     const [showLogin, setShowLogin] = useState(true);
-    
+
     return (
         <>
             <Router>
-                    <div className={`wrapper  ${!isLoginPage ? ('bg-[#121212]') : ('bg-white')}`}>
-                        {!isLoginPage && <Sidebar/>}
-                        <Content/>
-                    </div>
-                    <Player/>
-                    
-                    {device && <DeviceBar/>}
+                <div className={`wrapper  ${!isLoginPage ? ('bg-[#121212]') : ('bg-white')}`}>
+                    {!isLoginPage && <Sidebar />}
+                    <Content />
+                </div>
+                <Player />
+
+                {device && <DeviceBar />}
             </Router>
         </>
-  );
+    );
 }
 
 export default App;
