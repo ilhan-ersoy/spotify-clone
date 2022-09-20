@@ -35,6 +35,11 @@ function App() {
 
                 {device && <DeviceBar />}
             </Router>
+
+            <div className="bg-black h-full w-full">
+
+            </div>
+            
         </>
     );
 }

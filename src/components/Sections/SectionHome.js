@@ -25,12 +25,14 @@ export default function SectionHome({ item }) {
     }
 
     return (
+        
         <div
             id={item.id}
             onMouseOver={() => onMouseOver()}
             onMouseOut={() => onMouseOut()}
             className={'max-w-[32.625rem] h-20 bg-recently hover:bg-recentlyActive cursor-pointer ' +
                 'transition duration-300 ease-in-out mt-4 rounded flex items-center justify-between'}>
+                    
             <div className={'flex items-center gap-x-4'}>
                 <img src={item.image} className={'w-20 rounded'} alt={item.title} />
                 <span className={'font-semibold text-sm '}>

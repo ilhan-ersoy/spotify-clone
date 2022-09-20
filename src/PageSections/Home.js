@@ -24,15 +24,17 @@ export default function Home() {
             image: 'https://i.scdn.co/image/ab67616d00001e02e1936cf3e879a47f0deaece2',
             coverImage: 'https://i.scdn.co/image/ab67616d00001e02e1936cf3e879a47f0deaece2',
             mp3Src: 'https://freesound.org/data/previews/626/626892_13866597-lq.mp3',
-            color: ' bg-gradient-to-b bg-[#1f1a07] to-black'
+            color: ' bg-gradient-to-b bg-[#1f1a07] to-black',
+            songName:'Stranger Things'
         },
         {
             id: 3,
             title: 'Eminem',
             image: 'https://i.scdn.co/image/ab6761610000f178a00b11c129b27a88fc72f36b',
             coverImage: 'https://i.scdn.co/image/ab67616d00004851dbb3dd82da45b7d7f31b1b42',
-            mp3Src: 'https://freesound.org/data/previews/623/623977_1089955-lq.mp3',
-            color: 'bg-gradient-to-b bg-[#a64b85] to-black'
+            mp3Src: 'https://cdn.freesound.org/previews/650/650384_13866597-lq.mp3',
+            color: 'bg-gradient-to-b bg-[#a64b85] to-black',
+            songName:'The Real Slim Shady'
         },
         {
             id: 4,
@@ -52,11 +54,12 @@ export default function Home() {
         },
         {
             id: 6,
-            title: '22',
-            image: 'https://i.scdn.co/image/ab67616d0000b273c59447f268b6dfb4c433e8cc',
+            title: 'Travis Scott',
+            image: 'https://i.scdn.co/image/ab6761610000f178e707b87e3f65997f6c09bfff',
             coverImage: 'https://i.scdn.co/image/ab67616d0000b273c59447f268b6dfb4c433e8cc',
-            mp3Src: 'https://freesound.org/data/previews/623/623878_2282212-lq.mp3',
-            color: 'bg-gradient-to-b bg-[#ac3919] to-black'
+            mp3Src: 'https://cdn.freesound.org/previews/650/650386_13866597-lq.mp3',
+            color: 'bg-gradient-to-b bg-[#ac3919] to-black',
+            songName:'goosebumps'
         }
     ]
 
