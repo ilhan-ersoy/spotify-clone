@@ -275,6 +275,7 @@ export default function Search() {
                 items={favs}
                 type={'type2'}
             />
+            
             <HomeBox
                 title={'Browse all'}
                 items={browses}

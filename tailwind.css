@@ -38,8 +38,21 @@
         --background-noise: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjc1IiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGZpbHRlcj0idXJsKCNhKSIgb3BhY2l0eT0iLjA1IiBkPSJNMCAwaDMwMHYzMDBIMHoiLz48L3N2Zz4=);
         --buddy-feed-width: 270px;
     }
+
     .bg-gradient-artist {
-        background-image: linear-gradient(rgba(0,0,0,.6) 0,#121212 100%),var(--background-noise);
+        background-image: linear-gradient(rgba(0, 0, 0, .6) 0, #121212 100%), var(--background-noise);
+    }
+
+    .slick-next {
+        right: -230px !important;
+    }
+
+    .artist-popup-banner {
+        position: absolute;
+        height: 500px;
+        z-index: 99;
+        width: 100%;
+        top: 500px;
     }
 
     .bg-artist-page {
@@ -290,8 +303,8 @@
 
     .artist-about-bg {
         background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), url("https://i.scdn.co/image/374b48abf3af2b3fa5940ee838263c63df248a4e");
-        background-repeat:no-repeat;
-        background-size:cover;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .display {
@@ -314,5 +327,27 @@
 
     .custom-transform {
         transform: rotate(25deg) translate(18%, -2%);
+    }
+
+
+
+    .scrollbar::-webkit-scrollbar {
+        width: 20px;
+        height: 20px;
+    }
+
+    .scrollbar::-webkit-scrollbar-track {
+        border-radius: 100vh;
+        background: #f7f4ed;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        background: #e0cbcb;
+        border-radius: 100vh;
+        border: 3px solid #f6f7ed;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #c0a0b9;
     }
 }

@@ -1,0 +1,14 @@
+.slick-next {
+      right: 18px !important;
+      z-index: 99;
+}
+
+.slick-prev {
+      left: 17px !important;
+      z-index: 99;
+}
+
+.slick-active {
+      display: flex !important;
+      justify-content: center !important;
+}

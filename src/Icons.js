@@ -449,8 +449,35 @@ const PlaySong = ({ size }) => (
     </svg>
 )
 
+const OpenTab = ({ size }) => (
+    <svg
+        height={size}
+        width={size}
+        className="Svg-ytk21e-0 jAKAlG F6RR_jytWUwdg_jiv0Ss"
+        aria-hidden="true"
+
+    >
+        <path d="M1 2.75A.75.75 0 0 1 1.75 2H7v1.5H2.5v11h10.219V9h1.5v6.25a.75.75 0 0 1-.75.75H1.75a.75.75 0 0 1-.75-.75V2.75z" />
+        <path d="M15 1v4.993a.75.75 0 1 1-1.5 0V3.56L8.78 8.28a.75.75 0 0 1-1.06-1.06l4.72-4.72h-2.433a.75.75 0 0 1 0-1.5H15z" />
+    </svg>
+)
+
+const CloseComp = ({ size }) => (
+    <svg fill="currentColor" height={size} width={size} className="Svg-ytk21e-0 jAKAlG">
+        <path d="M1.47 1.47a.75.75 0 0 1 1.06 0L8 6.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L9.06 8l5.47 5.47a.75.75 0 1 1-1.06 1.06L8 9.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L6.94 8 1.47 2.53a.75.75 0 0 1 0-1.06z" />
+    </svg>
+)
+
+const CloseX = ({ size }) => (
+    <svg height={size} width={size} className="Svg-ytk21e-0 jAKAlG">
+        <path fill="#fff" d="M1.47 1.47a.75.75 0 0 1 1.06 0L8 6.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L9.06 8l5.47 5.47a.75.75 0 1 1-1.06 1.06L8 9.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L6.94 8 1.47 2.53a.75.75 0 0 1 0-1.06z" />
+    </svg>
+)
+
+
 
 export {
+    OpenTab,
     HomeIcon,
     SearchIcon,
     LibraryIcon,
@@ -494,5 +521,7 @@ export {
     LsPlayMoreIcon,
     VerifiedIcon,
     ArtistPageMore,
-    PlaySong
+    PlaySong,
+    CloseComp,
+    CloseX
 }
