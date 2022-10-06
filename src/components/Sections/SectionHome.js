@@ -2,7 +2,7 @@ import { PlayIcon } from "../../Icons";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setControls, setCurrent } from "../../Redux/playerSlice";
-import { setBackground } from "../../Redux/themeSlice";
+import { setBackground, setGradient } from "../../Redux/themeSlice";
 
 export default function SectionHome({ item }) {
     const [cursor, setCursor] = useState(false);
@@ -17,7 +17,7 @@ export default function SectionHome({ item }) {
 
     const onMouseOver = () => {
         setCursor(true)
-        // dispatch(setBackground(item.color))
+        dispatch(setGradient(item.color))
 
     }
     const onMouseOut = () => {

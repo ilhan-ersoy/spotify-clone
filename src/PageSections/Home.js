@@ -14,7 +14,7 @@ export default function Home() {
             coverImage: 'https://i.scdn.co/image/ab6761610000f178019d6873a01987cbe35888cd',
             // add song 
             mp3Src: 'https://cdn.freesound.org/previews/650/650383_13866597-lq.mp3',
-            color: 'bg-gradient-to-b bg-[#65605b] to-black',
+            color: '#65605b',
             songName: 'Bitch Better Have My Money'
         },
         {

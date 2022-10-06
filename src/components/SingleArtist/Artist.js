@@ -52,7 +52,7 @@ export default function Artist() {
                   </div>
                   <div className="relative">
                         <div className="bg-[#30a050] h-[230px] w-full absolute top-0 bg-gradient-artist">
-                              <div className="flex gap-x-8 items-center px-8 py-6">
+                              <div id="playbanner" className="flex gap-x-8 items-center px-8 py-6">
                                     <button
                                           className={`mr-5 bg-[#1ed760] w-14 h-14 rounded-full shadow-xxl flex items-center 
                                           hover:scale-110                        
